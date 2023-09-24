@@ -1,0 +1,28 @@
+# This ansible playbook can be run using:
+# ansible-playbook local.yml -K
+
+- name: Setting Up PC
+  hosts: localhost
+  connection: local
+  become: true
+  become_method: sudo
+  become_user: brayan
+
+  pre_tasks:
+    - name: Update arch using pacman before any installations.
+      import_tasks: ansible/tasks/pacman_update_arch.yml
+      become: true
+      become_user: root
+      extra_args: --yes
+
+
+  tasks:
+    - name: Install command line tools using pacman.
+      import_tasks: ansible/tasks/pacman_install_cli_apps.yml
+      become: true
+      become_user: root
+
+    - name: Install GUI apps using pacman.
+      import_tasks: ansible/tasks/pacman_install_gui_apps.yml
+      become: true
+      become_user: root
