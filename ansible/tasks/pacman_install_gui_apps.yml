@@ -34,6 +34,8 @@
       - qbittorrent
       - system-config-printer
       - mediaelch
+      - flatpak
+      - syncthing
     state: present
 
 - name: Remove conflicting packages.
