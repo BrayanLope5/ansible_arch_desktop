@@ -1,6 +1,8 @@
 - name: From repos AND AUR, install command line tools using pacman.
   community.general.pacman:
     name:
+      - ttf-firacode-nerd
+      - ttf-jetbrains-mono-nerd
       - zsh
       - starship
       - bottom
@@ -16,6 +18,7 @@
       - htop
       - ripgrep
       - fd
+      - lsd
       - lazygit
       - zoxide
       - fzf
