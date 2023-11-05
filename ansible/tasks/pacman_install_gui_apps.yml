@@ -1,13 +1,17 @@
 - name: From repos AND AUR, install GUI apps, their dependencies, and KDE plasma desktop packages using pacman.
   community.general.pacman:
     name:
+    # Show btrfs snapshots in the grub startup menu.
       - grub-btrfs
+    # Take system snapshots. Works specially great with btrfs file system.
       - timeshift
+    # Takes snapshop of system before updates automatically using timeshift.
       - timeshift-autosnap
       - xdg-desktop-portal
       - xdg-desktop-portal-kde
       - qt5-imageformats
       - kdegraphics-thumbnailers
+    # Needed to use nightlight plugin on kde desktop.
       - kdeplasma-addons
       - ffmpegthumbs
       - visual-studio-code-bin

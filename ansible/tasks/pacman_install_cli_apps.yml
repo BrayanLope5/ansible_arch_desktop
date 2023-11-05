@@ -1,32 +1,53 @@
 - name: From repos AND AUR, install command line tools using pacman.
   community.general.pacman:
     name:
+    # Terminal font. Patched with nerd fonts.
       - ttf-firacode-nerd
+    # VS Code font. Patched with nerd fonts.
       - ttf-jetbrains-mono-nerd
+    # Replaces bash.
       - zsh
+    # Terminal powerline.
       - starship
+    # System monitor.
       - bottom
+    # Colors output with rainbow colors.
       - lolcat
+    # To show off system and setup.
       - neofetch
+    # To make pretty pictures of source code.
       - silicon
+    # Show metadata of media files.
       - mediainfo
+    # Rename and tag music files.
       - beets
+    # Requirements for beets to fingerprint files.
       - python-pyacoustid
+    # Requirements for beets to fingerprint files.
       - chromaprint
+    # Requirements for beets to make API calls to MusicBrainz.
       - python-requests
+    # Alternative to cat. Shows contents of text files.
       - bat
+    # System monitor.
       - htop
+    # Alternative to grep.
       - ripgrep
       - fd
+    # Alternative to ls, shows files and directories with icons. Needs nerd font.
       - lsd
       - lazygit
+    # Alternative to cd but much better. It remembers folders visited.
       - zoxide
       - fzf
       - ansible
+    # Alternative to T-mux. A terminal multiplexer.
       - zellij
+    # Alternative to neovim/vim/nano.
       - helix
       - neovim-nightly-bin
       - mkvtoolnix-cli
+    # Recover deleted files and partitions. Just run and follow directions.
       - testdisk
     state: present
 
