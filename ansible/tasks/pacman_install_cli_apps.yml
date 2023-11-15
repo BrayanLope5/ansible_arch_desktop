@@ -51,8 +51,6 @@
     # - mkvtoolnix-cli
     # Recover deleted files and partitions. Just run and follow directions.
       - testdisk
-    # Pixel art map/level editor. Alternative to Tiled.
-      - ldtk
     # JAVA DEVELOPMENT.
     # Java/kotlin build system.
       - gradle

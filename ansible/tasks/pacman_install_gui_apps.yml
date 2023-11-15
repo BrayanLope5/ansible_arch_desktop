@@ -1,45 +1,63 @@
 - name: From repos AND AUR, install GUI apps, their dependencies, and KDE plasma desktop packages using pacman.
   community.general.pacman:
     name:
-    # Show btrfs snapshots in the grub startup menu.
+      # Show btrfs snapshots in the grub startup menu.
       - grub-btrfs
-    # Take system snapshots. Works specially great with btrfs file system.
+      # Take system snapshots. Works specially great with btrfs file system.
       - timeshift
-    # Takes snapshop of system before updates automatically using timeshift.
+      # Takes snapshop of system before updates automatically using timeshift.
       - timeshift-autosnap
       - xdg-desktop-portal
       - xdg-desktop-portal-kde
       - qt5-imageformats
       - kdegraphics-thumbnailers
-    # Needed to use nightlight plugin on kde desktop.
+      # Needed to use nightlight plugin on kde desktop.
       - kdeplasma-addons
       - ffmpegthumbs
       - visual-studio-code-bin
-      - chromium
+      # - chromium
+      # MS Office alternative and spell check tools.
       - libreoffice-fresh
       - hunspell
       - hunspell-en_us
       - hunspell-es_any
       - hunspell-es_gt
       - hunspell-es_mx
+      # Re-arrange pdf pages or remove them or combine multiple pdfs.
       - pdfarranger
+      # GPU accelerated terminal emulator.
       - alacritty
+      # Disk management, partition resizer, etc.
       - gparted
+      # Needed by gparted to check for errors.
       - gpart
+      # Simple media player.
       - mpv
+      # Media player.
       - vlc
+      # Image viewer.
       - nomacs
+      # Auto detect text on PDFs/images and tools needed.
       - gimagereader-qt
       - tesseract-data-eng
       - tesseract-data-spa
+      # Change mkv video metadata.
       - mkvtoolnix-gui
+      # Identify and add metadata to songs.
       - picard
+      # Music player.
       - strawberry
+      # Torrent client.
       - qbittorrent
+      # Easily add/configure printers.
       - system-config-printer
       - mediaelch
+      # Install flatpaks on the system.
       - flatpak
+      # Sync files between computers.
       - syncthing
+      # Pixel art map/level editor. Alternative to Tiled.
+      - ldtk
     state: present
 
 - name: Remove conflicting packages.
