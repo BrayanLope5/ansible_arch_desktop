@@ -20,13 +20,13 @@
     # Show metadata of media files.
       - mediainfo
     # Rename and tag music files.
-      - beets
+    # - beets
     # Requirements for beets to fingerprint files.
-      - python-pyacoustid
+    # - python-pyacoustid
     # Requirements for beets to fingerprint files.
-      - chromaprint
+    # - chromaprint
     # Requirements for beets to make API calls to MusicBrainz.
-      - python-requests
+    # - python-requests
     # Alternative to cat. Shows contents of text files.
       - bat
     # System monitor.
