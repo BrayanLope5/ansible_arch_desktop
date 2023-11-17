@@ -1,72 +1,83 @@
 - name: From repos AND AUR, install command line tools using pacman.
   community.general.pacman:
     name:
-    # Terminal font. Patched with nerd fonts.
+      # Make sure yay, the AUR helper is installed.
+      - yay
+      - git
+      # Terminal font. Patched with nerd fonts.
       - ttf-firacode-nerd
-    # VS Code font. Patched with nerd fonts.
+      # VS Code font. Patched with nerd fonts.
       - ttf-jetbrains-mono-nerd
-    # Replaces bash.
+      # Replaces bash.
       - zsh
-    # Terminal powerline.
+      # Terminal powerline.
       - starship
-    # System monitor. Use btm on terminal.
+      # System monitor. Use btm on terminal.
       - bottom
-    # Colors output with rainbow colors.
+      # Colors output with rainbow colors.
       - lolcat
-    # To show off system and setup.
+      # To show off system and setup.
       - neofetch
-    # To make pretty pictures of source code.
+      # To make pretty pictures of source code.
       - silicon
-    # Show metadata of media files.
+      # Tool to manipulate images. Good for resizing.
+      - imagemagick
+      # Raw image converter.
+      - dcraw
+      # All in one video/audio/image manipulation.
+      - ffmpeg
+      # Show metadata of media files.
       - mediainfo
-    # Rename and tag music files.
-    # - beets
-    # Requirements for beets to fingerprint files.
-    # - python-pyacoustid
-    # Requirements for beets to fingerprint files.
-    # - chromaprint
-    # Requirements for beets to make API calls to MusicBrainz.
-    # - python-requests
-    # Alternative to cat. Shows contents of text files.
+      # Rename and tag music files.
+      # - beets
+      # Requirements for beets to fingerprint files.
+      # - python-pyacoustid
+      # Requirements for beets to fingerprint files.
+      # - chromaprint
+      # Requirements for beets to make API calls to MusicBrainz.
+      # - python-requests
+      # Alternative to cat. Shows contents of text files.
       - bat
-    # System monitor.
+      # System monitor.
       - htop
-    # Alternative to grep.
+      # Alternative to grep.
       - ripgrep
-    # Alternative to find.
+      # Alternative to find.
       - fd
-    # Alternative to ls, shows files and directories with icons. Needs nerd font.
+      # Alternative to ls, shows files and directories with icons. Needs nerd font.
       - lsd
-    # TUI alternative for git.
+      # TUI alternative for git.
       - lazygit
-    # Alternative to cd but much better. It remembers folders visited.
+      # Alternative to cd but much better. It remembers folders visited.
       - zoxide
       - fzf
       - ansible
-    # Alternative to T-mux. A terminal multiplexer.
+      # Alternative to T-mux. A terminal multiplexer.
       - zellij
-    # Alternative to neovim/vim/nano.
+      # Alternative to neovim/vim/nano.
       - helix
-    # - neovim-nightly-bin
-    # - mkvtoolnix-cli
-    # Recover deleted files and partitions. Just run and follow directions.
+      # - neovim-nightly-bin
+      # - mkvtoolnix-cli
+      # Recover deleted files and partitions. Just run and follow directions.
       - testdisk
-    # JAVA DEVELOPMENT.
-    # Java/kotlin build system.
+      # JAVA DEVELOPMENT.
+      # Java/kotlin build system.
       - gradle
       - jre17-openjdk
       - jdk17-openjdk
       - jre17-openjdk-headless
-    # LSP for java. Used by Helix.
+      # LSP for java. Used by Helix.
       - jdtls
-    # C-SHARPT DEVELOPMENT.
+      # C-SHARPT DEVELOPMENT.
       - dotnet-sdk-6.0
       - dotnet-runtime-6.0
-    # C-sharp LSP. Needed for Helix.
+      # C-sharp LSP. Needed for Helix.
       - omnisharp-roslyn
-    # Language sever for yaml documents. Needed for Helix.
+      # Language sever for yaml documents. Needed for Helix.
       - yaml-language-server
     state: present
+    # Do not installed already installed packages and assume yes to prompts.
+    extra_args: --needed --noconfirm --ask=4
 
 - name: Remove conflicting packages.
   community.general.pacman:
