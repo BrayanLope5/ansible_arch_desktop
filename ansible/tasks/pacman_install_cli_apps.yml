@@ -46,8 +46,10 @@
       - fd
       # Alternative to ls, shows files and directories with icons. Needs nerd font.
       - lsd
-      # TUI alternative for git.
+      # TUI alternative for git written in go.
       - lazygit
+      # Friendly TUI alternative for git written in Rust.
+      - gitui
       # Alternative to cd but much better. It remembers folders visited.
       - zoxide
       - fzf
