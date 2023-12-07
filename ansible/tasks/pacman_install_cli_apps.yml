@@ -68,12 +68,12 @@
       - jre17-openjdk
       - jdk17-openjdk
       - jre17-openjdk-headless
-      # LSP for java. Used by Helix.
+      # AUR LSP for java. Used by Helix.
       - jdtls
       # C-SHARPT DEVELOPMENT.
       - dotnet-sdk-6.0
       - dotnet-runtime-6.0
-      # C-sharp LSP. Needed for Helix.
+      # AUR C-sharp LSP. Needed for Helix.
       - omnisharp-roslyn
       # Language sever for yaml documents. Needed for Helix.
       - yaml-language-server
