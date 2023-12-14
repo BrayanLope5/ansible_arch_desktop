@@ -4,3 +4,8 @@
     upgrade: true
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
+
+- name: Get name of desktop environment
+  shell:
+  cmd: "echo $XDG_CURRENT_DESKTOP"
+  register: current_desktop
