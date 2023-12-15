@@ -22,3 +22,12 @@
       - com.mattjakeman.ExtensionManager
     state: present
     method: user
+
+- name: Install gnome gui apps from flathub for current user if DE is gnome.
+  community.general.flatpak:
+    name:
+      # App to manage Gnome extensions.
+      - com.mattjakeman.ExtensionManager
+    state: present
+    method: user
+    when: current_DE is search("gnome")
