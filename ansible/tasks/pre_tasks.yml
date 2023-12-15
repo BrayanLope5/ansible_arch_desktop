@@ -13,3 +13,8 @@
 - name: Convert current_desktop to lowercase such as gnome or plasma. USE current_DE instead of current_desktop.
   ansible.builtin.set_fact:
     current_DE: "{{ current_desktop.stdout | lower }}"
+
+- name: Collect the following facts related to he system.
+  ansible.builtin.setup:
+    gather_subset:
+      - mounts
