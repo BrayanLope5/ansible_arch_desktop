@@ -41,7 +41,9 @@
       - mediaelch
       # Install flatpaks on the system.
       - flatpak
-      # Sync files between computers.
+      # Sync files between computers. Not necessarily a gui ap.
+      # systemctl --user enable syncthing.service
+      # systemctl --user start syncthing.service
       - syncthing
       # Pixel art map/level editor. Alternative to Tiled.
       - ldtk
