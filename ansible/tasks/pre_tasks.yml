@@ -9,3 +9,7 @@
   shell:
   cmd: "echo $XDG_CURRENT_DESKTOP"
   register: current_desktop
+
+- name: Convert current_desktop to lowercase such as gnome or plasma. USE current_DE instead of current_desktop.
+  ansible.builtin.set_fact:
+    current_DE: "{{ current_desktop.stdout | lower }}"

@@ -2,6 +2,7 @@
   community.general.flatpak_remote:
     name: flathub
     state: absent
+    method: system
 
 - name: Add the flathub repository remote to the user installation.
   community.general.flatpak_remote:

@@ -1,5 +1,8 @@
 # This ansible playbook can be run locally using:
 # ansible-playbook local.yml -K
+# Most tasks need root privileges and for those we specify become_user: root.
+# For others we need to be the non-root user and for that we have the variable
+# non_root_user: brayan.
 
 - name: Setting Up PC
   vars:
@@ -12,7 +15,7 @@
 
   pre_tasks:
     - name: Update arch using pacman before any installations.
-      import_tasks: ansible/tasks/pacman_update_arch.yml
+      import_tasks: ansible/tasks/pre_tasks.yml
       become: true
       become_user: root
 
