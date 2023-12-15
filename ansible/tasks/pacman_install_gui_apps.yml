@@ -1,19 +1,6 @@
-- name: From repos AND AUR, install GUI apps, their dependencies, and KDE plasma desktop packages using pacman.
+- name: From repos AND AUR, install GUI apps and their dependencies using pacman.
   community.general.pacman:
     name:
-      # Show btrfs snapshots in the grub startup menu.
-      - grub-btrfs
-      # Take system snapshots. Works specially great with btrfs file system.
-      - timeshift
-      # Takes snapshop of system before updates automatically using timeshift.
-      - timeshift-autosnap
-      - xdg-desktop-portal
-      - xdg-desktop-portal-kde
-      - qt5-imageformats
-      - kdegraphics-thumbnailers
-      # Needed to use nightlight plugin on kde desktop.
-      - kdeplasma-addons
-      - ffmpegthumbs
       - visual-studio-code-bin
       # - chromium
       # MS Office alternative and spell check tools.
@@ -58,8 +45,6 @@
       - syncthing
       # Pixel art map/level editor. Alternative to Tiled.
       - ldtk
-      # Tool to change some things on gnome. Font size especially.
-      - gnome-tweaks
       # Retroarch and needed packages. Must change config to download cores/assets from within retroarch.
       - retroarch
       # Playstation like theme.
@@ -70,9 +55,55 @@
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
 
+- name: From repos AND AUR, install GNOME GUI apps and their dependencies using pacman.
+  community.general.pacman:
+    name:
+      # Tool to change some things on gnome. Font size especially.
+      - gnome-tweaks
+    state: present
+    # Do not installed already installed packages and assume yes to prompts.
+    extra_args: --needed --noconfirm --ask=4
+    when: current_DE is search("gnome")
+
+- name: From repos AND AUR, install KDE/PLASMA GUI apps and their dependencies using pacman.
+  community.general.pacman:
+    name:
+      - xdg-desktop-portal
+      - xdg-desktop-portal-kde
+      - qt5-imageformats
+      - kdegraphics-thumbnailers
+      # Needed to use nightlight plugin on kde desktop.
+      - kdeplasma-addons
+      - ffmpegthumbs
+    state: present
+    # Do not installed already installed packages and assume yes to prompts.
+    extra_args: --needed --noconfirm --ask=4
+    when: current_DE is search("plasma")
+
+# TODO: Get file system name.
+- name: From repos AND AUR, install timeshift and dependencies using pacman if using btrfs file system.
+  community.general.pacman:
+    name:
+      # Show btrfs snapshots in the grub startup menu.
+      - grub-btrfs
+      # Take system snapshots. Works specially great with btrfs file system.
+      - timeshift
+      # Takes snapshop of system before updates automatically using timeshift.
+      - timeshift-autosnap
+    state: present
+    # Do not installed already installed packages and assume yes to prompts.
+    extra_args: --needed --noconfirm --ask=4
+    when: current_DE is search("plasma")
+
 - name: Remove conflicting packages.
   community.general.pacman:
     name:
-      - ffmpegthumbnailer
       - libreoffice-still
     state: absent
+
+- name: Remove conflicting plasma/kde packages.
+  community.general.pacman:
+    name:
+      - ffmpegthumbnailer
+    state: absent
+    when: current_DE is search("plasma")
