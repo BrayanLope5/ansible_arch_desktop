@@ -18,8 +18,7 @@
       - us.zoom.Zoom
       - com.brave.Browser
       - org.nomacs.ImageLounge
-      # To manage Gnome extensions.
-      - com.mattjakeman.ExtensionManager
+      - io.gitlab.librewolf-community
     state: present
     method: user
 

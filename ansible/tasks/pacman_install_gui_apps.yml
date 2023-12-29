@@ -13,7 +13,8 @@
       # Re-arrange pdf pages or remove them or combine multiple pdfs.
       - pdfarranger
       # GPU accelerated terminal emulator.
-      - alacritty
+      #- alacritty
+      - kitty
       # Disk management, partition resizer, etc.
       - gparted
       # Needed by gparted to check for errors.
@@ -53,6 +54,8 @@
       - retroarch-assets-xmb
       # List of cores available for download from within retroarch.
       - libretro-core-info
+      # Lightroom alternative
+      - darktable
     state: present
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
