@@ -14,7 +14,8 @@
       - pdfarranger
       # GPU accelerated terminal emulator.
       #- alacritty
-      - kitty
+      #- kitty
+      - wezterm
       # Disk management, partition resizer, etc.
       - gparted
       # Needed by gparted to check for errors.
