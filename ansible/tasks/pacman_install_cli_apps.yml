@@ -8,6 +8,8 @@
       - ttf-firacode-nerd
       # VS Code font. Patched with nerd fonts.
       - ttf-jetbrains-mono-nerd
+      # Open source google emoji font
+      - noto-fonts-emoji
       # Replaces bash.
       - zsh
       # Terminal powerline.
