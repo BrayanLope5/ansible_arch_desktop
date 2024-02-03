@@ -55,7 +55,11 @@
       - retroarch-assets-xmb
       # List of cores available for download from within retroarch.
       - libretro-core-info
-      # Lightroom alternative
+      # Lightroom alternative. Needs opencl for hardware
+      # acceleration.
+      # For nvidia cards we need opencl-nvidia
+      # For intel integrated graphics we need intel-compute-runtime
+      # Run darktable-cltest to check if it's working.
       - darktable
     state: present
     # Do not installed already installed packages and assume yes to prompts.
