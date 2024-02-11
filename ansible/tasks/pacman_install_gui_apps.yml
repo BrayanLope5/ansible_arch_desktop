@@ -61,6 +61,10 @@
       # For intel integrated graphics we need intel-compute-runtime
       # Run darktable-cltest to check if it's working.
       - darktable
+      # Photoshop alternative.
+      - gimp
+      # Content aware healing from AUR.
+      - gimp-plugin-resynthesizer-git
     state: present
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
