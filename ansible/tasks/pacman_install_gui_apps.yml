@@ -90,12 +90,16 @@
 - name: From repos AND AUR, install KDE/PLASMA GUI apps and their dependencies using pacman.
   community.general.pacman:
     name:
+      # Desktop integration portals for sandboxed apps such as flatpaks, appimages and gtk apps on kde DE.
       - xdg-desktop-portal
       - xdg-desktop-portal-kde
+      # Plugins for additional image formats: TIFF, MNG, TGA, WBMP
       - qt5-imageformats
+      # Allow KDE pps to show thumbnails for PostScript, RAW, Mobipocket, and Blender files.
       - kdegraphics-thumbnailers
       # Needed to use nightlight plugin on kde desktop.
       - kdeplasma-addons
+      # FFmpeg-based thumbnail creator for video files.
       - ffmpegthumbs
     state: present
     # Do not installed already installed packages and assume yes to prompts.
