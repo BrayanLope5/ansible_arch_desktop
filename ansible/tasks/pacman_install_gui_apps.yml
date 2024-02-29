@@ -69,6 +69,9 @@
       - gimp-plugin-resynthesizer-git
       # Downloads manager written in java.
       #- jdownloader2
+      # - sunshine
+      # - moonlight
+      # - joplin
     state: present
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
