@@ -60,6 +60,7 @@
       # For nvidia cards we need opencl-nvidia
       # For intel integrated graphics we need intel-compute-runtime
       # Run darktable-cltest to check if it's working.
+      # Don't forget to disable xml creation.
       - darktable
       # Photoshop alternative.
       - gimp
