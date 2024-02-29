@@ -56,6 +56,10 @@
       - zoxide
       - fzf
       - ansible
+      # Disk usage analyzer.
+      - dua-cli
+      # Disk usage analyzer.
+      - ncdu
       # Alternative to T-mux. A terminal multiplexer.
       - zellij
       # Alternative to neovim/vim/nano.
