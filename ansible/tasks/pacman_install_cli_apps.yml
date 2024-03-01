@@ -54,12 +54,16 @@
       - gitui
       # Alternative to cd but much better. It remembers folders visited.
       - zoxide
+      # Terminal file manager. move, create, rename, preview files/directories.
+      - yazi
       - fzf
       - ansible
       # Disk usage analyzer.
       - dua-cli
       # Disk usage analyzer.
       - ncdu
+      # Markdown preview from the terminal.
+      - glow
       # Alternative to T-mux. A terminal multiplexer.
       - zellij
       # Alternative to neovim/vim/nano.

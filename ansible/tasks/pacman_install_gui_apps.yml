@@ -47,6 +47,8 @@
       # systemctl --user enable syncthing.service
       # systemctl --user start syncthing.service
       - syncthing
+      # Disk benchmarking utility.
+      - kdiskmark
       # Pixel art map/level editor. Alternative to Tiled.
       - ldtk
       # Retroarch and needed packages. Must change config to download cores/assets from within retroarch.
@@ -68,6 +70,10 @@
       - krita
       # Content aware healing from AUR.
       - gimp-plugin-resynthesizer-git
+      # Very complex audio editor.
+      #- ardour
+      # Audio editor/recorder.
+      - audacity
       # Downloads manager written in java.
       #- jdownloader2
       # - sunshine
