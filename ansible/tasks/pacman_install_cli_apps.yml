@@ -50,17 +50,18 @@
       - lsd
       # TUI alternative for git written in go.
       - lazygit
-      # Friendly TUI alternative for git written in Rust.
+      # Friendly TUI alternative for git written in Rust. Not as nice as lazygit.
       - gitui
       # Alternative to cd but much better. It remembers folders visited.
       - zoxide
       # Terminal file manager. move, create, rename, preview files/directories.
       - yazi
+      # Search anything. By default, search files.
       - fzf
       - ansible
-      # Disk usage analyzer.
+      # Disk usage analyzer. Launch with dua interactive.
       - dua-cli
-      # Disk usage analyzer.
+      # Disk usage analyzer. Barely better in some ways than dua.
       - ncdu
       # Markdown preview from the terminal.
       - glow
