@@ -63,7 +63,7 @@
       # Search anything. By default, search files.
       - fzf
       - ansible
-      # Disk usage analyzer. Launch with dua interactive.
+      # Disk usage analyzer. Launch with dua interactive. Run with "dua i".
       - dua-cli
       # Disk usage analyzer. Barely better in some ways than dua.
       - ncdu
