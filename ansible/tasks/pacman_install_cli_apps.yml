@@ -85,7 +85,7 @@
       - testdisk
       # Check for typos on text files. typos --diff --color always
       - typos
-      # Conda alternative.
+      # Conda alternative but uses pypi repos.
       - uv
       # JAVA DEVELOPMENT.
       # Java/kotlin build system.
