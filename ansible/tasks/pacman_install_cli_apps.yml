@@ -79,6 +79,8 @@
       #- zellij
       # Alternative to neovim/vim/nano.
       - helix
+      # Automagically source .envrc files on cd.
+      - direnv
       # - neovim-nightly-bin
       # - mkvtoolnix-cli
       # Recover deleted files and partitions. Just run and follow directions.
