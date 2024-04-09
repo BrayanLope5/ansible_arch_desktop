@@ -85,7 +85,7 @@
       - testdisk
       # Check for typos on text files. typos --diff --color always
       - typos
-      # Conda alternative but uses pypi repos.
+      # Conda alternative but uses pypi repos. pixi seems better right now.
       - rye
       # Conda alternative but can use pypi repos AND conda repos.
       - pixi
