@@ -83,11 +83,12 @@
       # - mkvtoolnix-cli
       # Recover deleted files and partitions. Just run and follow directions.
       - testdisk
-      # Check for typos on text files. typos --diff --color always
+      # Check for typos on text files. typos --diff --color alwayst
       - typos
-      # Conda alternative but uses pypi repos. pixi seems better right now.
+      # Conda alternative but uses pypi repos. Maybe better for python.
       - rye
       # Conda alternative but can use pypi repos AND conda repos.
+      # It can also manage other runtimes, not just python.
       - pixi
       # JAVA DEVELOPMENT.
       # Java/kotlin build system.
