@@ -85,6 +85,8 @@
       - testdisk
       # Check for typos on text files. typos --diff --color always
       - typos
+      # Conda alternative.
+      - uv
       # JAVA DEVELOPMENT.
       # Java/kotlin build system.
       - gradle
