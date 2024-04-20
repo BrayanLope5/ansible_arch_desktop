@@ -112,7 +112,7 @@
       # dvisvgm can convert tex files source files and pdfs to svg.
       - texlive-dvisvgm
       # LSP/CLI tool for toml files.
-      - taplo
+      - taplo-cli
     state: present
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
