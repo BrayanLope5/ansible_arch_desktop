@@ -60,6 +60,8 @@
       - lsd
       # TUI alternative for git written in go.
       - lazygit
+      # AUR: tui to manage docker containers.
+      - lazydocker
       # Friendly TUI alternative for git written in Rust. Not as nice as lazygit.
       - gitui
       # Alternative to cd but much better. It remembers folders visited.
