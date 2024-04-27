@@ -72,6 +72,8 @@
       - gitui
       # Alternative to cd but much better. It remembers folders visited.
       - zoxide
+      # NOT IN REPOS OR AUR. AUR version is just sorce code.
+      # - clipse
       # Terminal file manager. move, create, rename, preview files/directories.
       - yazi
       # Search anything. By default, search files.
