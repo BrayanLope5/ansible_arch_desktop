@@ -19,7 +19,7 @@
       # System monitor. Use btm on terminal.
       - bottom
       # Better manpages. Only works with a few commands.
-      - tldr
+      - tealdeer
       # Better shell history search.
       - atuin
       # Colors output with rainbow colors.
