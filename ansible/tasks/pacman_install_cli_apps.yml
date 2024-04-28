@@ -86,6 +86,8 @@
       - chezmoi
       # Provides shell components to quickly build goo looking scripts.
       - gum
+      # Record gifs/videos of terminal commands.
+      - vhs
       # Terminal file manager. move, create, rename, preview files/directories.
       - yazi
       # Search anything. By default, search files.
