@@ -73,7 +73,19 @@
       # Alternative to cd but much better. It remembers folders visited.
       - zoxide
       # NOT IN REPOS OR AUR. AUR version is just sorce code.
+      # Clipboard manager for the terminal.
+      # https://github.com/savedra1/clipse
       # - clipse
+      # Save, copy, and edit code snippents.
+      # https://github.com/maaslalani/nap
+      # - nap
+      # Take images of source code or terminal command output.
+      # https://github.com/charmbracelet/freeze
+      # - freeze
+      # Dotfiles manager.
+      - chezmoi
+      # Provides shell components to quickly build goo looking scripts.
+      - gum
       # Terminal file manager. move, create, rename, preview files/directories.
       - yazi
       # Search anything. By default, search files.
