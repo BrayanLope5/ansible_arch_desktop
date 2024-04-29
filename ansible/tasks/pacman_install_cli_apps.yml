@@ -18,7 +18,7 @@
       - starship
       # System monitor. Use btm on terminal.
       - bottom
-      # Better manpages. Only works with a few commands.
+      # Better manpages and tldr. Knows about fewer apps than manpages.
       - tealdeer
       # Better shell history search.
       - atuin
@@ -66,6 +66,8 @@
       - lazygit
       # Better diff/pager.
       - git-delta
+      # Another diff alternative but that understands syntax. Run with difft
+      - difftastic
       # AUR: tui to manage docker containers.
       - lazydocker
       # Friendly TUI alternative for git written in Rust. Not as nice as lazygit.
