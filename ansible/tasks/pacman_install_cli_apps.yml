@@ -25,7 +25,9 @@
       # Colors output with rainbow colors.
       - lolcat
       # To show off system and setup.
-      - neofetch
+      # - neofetch
+      # neofetch alternative written in c.
+      - fastfetch
       # neofetch but instead of system details, it gives git details.
       - onefetch
       # To make pretty pictures of source code.
