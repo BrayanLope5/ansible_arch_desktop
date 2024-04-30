@@ -19,6 +19,7 @@
       - com.brave.Browser
       - org.nomacs.ImageLounge
       - io.gitlab.librewolf-community
+      - com.dec05eba.gpu_screen_recorder
     state: present
     method: user
 
