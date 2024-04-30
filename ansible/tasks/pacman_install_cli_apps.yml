@@ -12,6 +12,8 @@
       - noto-fonts-emoji
       # For a cli terminal we only need libqalculate and run qalc
       - libqalculate
+      # Needed by qalc to display plots using the plot() function.
+      - gnuplot
       # To use this same library but with GUI frontend we need the following.
       # - qalculate-qt
       # Replaces bash.
