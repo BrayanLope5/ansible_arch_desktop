@@ -10,6 +10,10 @@
       - ttf-jetbrains-mono-nerd
       # Open source google emoji font
       - noto-fonts-emoji
+      # For a cli terminal we only need libqalculate and run qalc
+      - libqalculate
+      # To use this same library but with GUI frontend we need the following.
+      # - qalculate-qt
       # Replaces bash.
       #- zsh
       # Better interactive shell but non-posix compliant.
