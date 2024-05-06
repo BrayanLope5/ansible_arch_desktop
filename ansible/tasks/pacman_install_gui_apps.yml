@@ -22,6 +22,11 @@
       - gpart
       # Simple media player.
       - mpv
+      # Add preview to mpv timeline while moving mouse over it.
+      # https://github.com/po5/thumbfast
+      # Better mpv gui. Make sure to remove binaries that add the ability to
+      # download subtitles from the internet.
+      # https://github.com/tomasklaen/uosc
       # Media player.
       - vlc
       # Image viewer. Flatpak preferred.
