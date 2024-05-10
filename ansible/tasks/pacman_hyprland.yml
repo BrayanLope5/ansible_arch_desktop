@@ -1,0 +1,21 @@
+- name: From repos AND AUR, install hyprland specific nececities.
+  community.general.pacman:
+    name:
+      # Hyprland itself.
+      - hyprland
+      # Change gtk settings like color and icon theme.
+      - nwg-look
+      # Allow for screen recording.
+      - xdg-dektop-portal
+      - xdg-dektop-portal-hyprland
+      - xdg-dektop-portal-gtk
+      - xdg-dektop-portal-kde
+      # App launcher.
+      - fuzzel
+      # A widget framework that uses gtk under the hood and javascript as the
+      # configuration language.
+      - aylurs-gtk-shell
+    state: present
+    # Do not installed already installed packages and assume yes to prompts.
+    extra_args: --needed --noconfirm --ask=4
+
