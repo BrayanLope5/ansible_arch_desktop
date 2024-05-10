@@ -12,6 +12,10 @@
       - xdg-dektop-portal-kde
       # App launcher.
       - fuzzel
+      # A status bar for wayland compositors.
+      - waybar
+      # Needed for waybar.
+      - otf-font-awesome
       # A widget framework that uses gtk under the hood and javascript as the
       # configuration language.
       - aylurs-gtk-shell
