@@ -16,6 +16,8 @@
       - waybar
       # Notification deamon.
       - swaync
+      # Start authentication agent for apps that need a pop up to ask for pass.
+      - polkit-kde-agent
     state: present
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
