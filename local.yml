@@ -1,5 +1,7 @@
 # This ansible playbook can be run locally using:
 # ansible-playbook local.yml -K
+# OR we can use this command to run it without making any changes.
+# ansible-playbook local.yml -K --diff --check
 # Most tasks need root privileges and for those we specify become_user: root.
 # For others we need to be the non-root user and for that we have the variable
 # non_root_user: brayan.
