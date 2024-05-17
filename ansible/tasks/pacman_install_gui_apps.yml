@@ -55,7 +55,7 @@
       # Disk benchmarking utility.
       - kdiskmark
       # Pixel art map/level editor. Alternative to Tiled.
-      - ldtk
+      # - ldtk
       # Retroarch and needed packages. Must change config to download cores/assets from within retroarch.
       - retroarch
       # Playstation like theme.
