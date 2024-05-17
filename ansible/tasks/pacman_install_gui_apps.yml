@@ -94,9 +94,9 @@
       # Tool to change some things on gnome. Font size especially.
       - gnome-tweaks
     state: present
-    when: current_DE is search("gnome")
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
+  when: current_DE is search("gnome")
 
 - name: From repos AND AUR, install KDE/PLASMA GUI apps and their dependencies using pacman.
   community.general.pacman:
@@ -113,9 +113,9 @@
       # FFmpeg-based thumbnail creator for video files.
       - ffmpegthumbs
     state: present
-    when: current_DE is search("plasma")
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
+  when: current_DE is search("plasma")
 
 # TODO: Get file system name.
 - name: From repos AND AUR, install timeshift and dependencies using pacman if using btrfs file system.
@@ -128,9 +128,9 @@
       # Takes snapshop of system before updates automatically using timeshift.
       - timeshift-autosnap
     state: present
-    when: ansible_mounts is search("btrfs")
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
+  when: ansible_mounts is search("btrfs")
 
 - name: Remove conflicting packages.
   community.general.pacman:
@@ -143,4 +143,4 @@
     name:
       - ffmpegthumbnailer
     state: absent
-    when: current_DE is search("plasma")
+  when: current_DE is search("plasma")
