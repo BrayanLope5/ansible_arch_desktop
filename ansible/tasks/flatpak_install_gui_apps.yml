@@ -30,4 +30,4 @@
       - com.mattjakeman.ExtensionManager
     state: present
     method: user
-    when: current_DE is search("gnome")
+  when: current_DE is search("gnome")
