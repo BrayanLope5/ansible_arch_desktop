@@ -6,7 +6,7 @@
       # Change gtk settings like color and icon theme.
       - nwg-look
       # Allow for screen recording.
-      - xdg-dektop-portal
+      # - xdg-desktop-portal
       - xdg-dektop-portal-hyprland
       - xdg-dektop-portal-gtk
       - xdg-dektop-portal-kde
