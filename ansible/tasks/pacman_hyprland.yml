@@ -1,6 +1,8 @@
 - name: From repos AND AUR, install hyprland specific nececities.
   community.general.pacman:
     name:
+      # Some icons are not present in nerd fonts so I still need this for now.
+      - otf-font-awesome
       # Hyprland itself.
       - hyprland
       # Change gtk settings like color and icon theme.
@@ -18,6 +20,8 @@
       - swaync
       # Start authentication agent for apps that need a pop up to ask for pass.
       - polkit-kde-agent
+      # Applet to connect to wifi/ethernet.
+      - network-manager-applet
     state: present
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
