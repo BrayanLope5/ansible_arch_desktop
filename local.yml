@@ -30,6 +30,11 @@
       become: true
       become_user: root
 
+    - name: Install hyprland pre-requisits using pacman/yay.
+      import_task: ansible/tasks/pacman_hyprland.yml
+      become: true
+      become_user: root
+
     - name: Install GUI apps using flatpak.
       import_tasks: ansible/tasks/flatpak_install_gui_apps.yml
       become: true
