@@ -7,9 +7,9 @@
       - nwg-look
       # Allow for screen recording.
       # - xdg-desktop-portal
-      - xdg-dektop-portal-hyprland
-      - xdg-dektop-portal-gtk
-      - xdg-dektop-portal-kde
+      - xdg-desktop-portal-hyprland
+      - xdg-desktop-portal-gtk
+      - xdg-desktop-portal-kde
       # App launcher.
       - fuzzel
       # A status bar for wayland compositors.
