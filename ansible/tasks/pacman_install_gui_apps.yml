@@ -70,15 +70,15 @@
       # Don't forget to disable xml creation.
       - darktable
       # Photoshop alternative.
-      - gimp
+      # - gimp
       # Easier to use stable diffusion with it.
       - krita
       # Content aware healing from AUR.
-      - gimp-plugin-resynthesizer-git
+      # - gimp-plugin-resynthesizer-git
       # Very complex audio editor.
       #- ardour
       # Audio editor/recorder.
-      - audacity
+      # - audacity
       # Downloads manager written in java.
       #- jdownloader2
       # - sunshine
@@ -97,7 +97,6 @@
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
     when: current_DE is search("gnome")
-
 - name: From repos AND AUR, install KDE/PLASMA GUI apps and their dependencies using pacman.
   community.general.pacman:
     name:
