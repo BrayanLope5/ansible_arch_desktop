@@ -31,7 +31,7 @@
       become_user: root
 
     - name: Install hyprland pre-requisits using pacman/yay.
-      import_task: ansible/tasks/pacman_hyprland.yml
+      import_tasks: ansible/tasks/pacman_hyprland.yml
       become: true
       become_user: root
 

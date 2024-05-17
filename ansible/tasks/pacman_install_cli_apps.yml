@@ -49,8 +49,7 @@
       # Rename and tag music files.
       # - beets
       # Requirements for beets to fingerprint files.
-      # - python-pyacoustid
-      # Requirements for beets to fingerprint files.
+      # - python-pyacoustid # Requirements for beets to fingerprint files.
       # - chromaprint
       # Requirements for beets to make API calls to MusicBrainz.
       # - python-requests
@@ -77,7 +76,7 @@
       # Another diff alternative but that understands syntax. Run with difft
       - difftastic
       # AUR: tui to manage docker containers.
-      - lazydocker
+      # - lazydocker
       # Friendly TUI alternative for git written in Rust. Not as nice as lazygit.
       - gitui
       # Alternative to cd but much better. It remembers folders visited.
@@ -134,23 +133,23 @@
       - pixi
       # JAVA DEVELOPMENT.
       # Java/kotlin build system.
-      - gradle
-      - jre17-openjdk
-      - jdk17-openjdk
-      - jre17-openjdk-headless
+      # - gradle
+      # - jre17-openjdk
+      # - jdk17-openjdk
+      # - jre17-openjdk-headless
       # AUR LSP for java. Used by Helix.
-      - jdtls
+      # - jdtls
       # C-SHARPT DEVELOPMENT.
-      - dotnet-sdk-6.0
-      - dotnet-runtime-6.0
+      # - dotnet-sdk-6.0
+      # - dotnet-runtime-6.0
       # AUR C-sharp LSP. Needed for Helix.
-      - omnisharp-roslyn
+      # - omnisharp-roslyn
       # Language sever for yaml documents. Needed for Helix.
       - yaml-language-server
       # Tex file editing dependency packages.
-      - texlive
+      # - texlive
       # dvisvgm can convert tex files source files and pdfs to svg.
-      - texlive-dvisvgm
+      # - texlive-dvisvgm
       # LSP/CLI tool for toml files.
       - taplo-cli
     state: present

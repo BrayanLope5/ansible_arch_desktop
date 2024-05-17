@@ -6,8 +6,8 @@
     extra_args: --needed --noconfirm --ask=4
 
 - name: Get name of desktop environment
-  shell:
-  cmd: "echo $XDG_CURRENT_DESKTOP"
+  shell: "echo $XDG_CURRENT_DESKTOP"
+  # cmd: "echo $XDG_CURRENT_DESKTOP"
   register: current_desktop
 
 - name: Convert current_desktop to lowercase such as gnome or plasma. USE current_DE instead of current_desktop.
