@@ -1,15 +1,15 @@
-- name: Remove the flathub remote from the system installation.
-  community.general.flatpak_remote:
-    name: flathub
-    state: absent
-    method: system
+# - name: Remove the flathub remote from the system installation.
+#   community.general.flatpak_remote:
+#     name: flathub
+#     state: absent
+#     method: system
 
 - name: Add the flathub repository remote to the user installation.
   community.general.flatpak_remote:
     name: flathub
     state: present
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
-    method: user
+    method: system
 
 - name: Install gui apps from flathub for current user.
   community.general.flatpak:
