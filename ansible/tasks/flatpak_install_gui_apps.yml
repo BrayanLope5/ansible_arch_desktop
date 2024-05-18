@@ -1,8 +1,8 @@
-# - name: Remove the flathub remote from the system installation.
-#   community.general.flatpak_remote:
-#     name: flathub
-#     state: absent
-#     method: system
+- name: Remove the flathub remote from the system installation.
+  community.general.flatpak_remote:
+    name: flathub
+    state: absent
+    method: user
 
 - name: Add the flathub repository remote to the user installation.
   community.general.flatpak_remote:
@@ -21,7 +21,7 @@
       - io.gitlab.librewolf-community
       - com.dec05eba.gpu_screen_recorder
     state: present
-    method: user
+    method: system
 
 - name: Install gnome gui apps from flathub for current user if DE is gnome.
   community.general.flatpak:
@@ -29,5 +29,5 @@
       # App to manage Gnome extensions.
       - com.mattjakeman.ExtensionManager
     state: present
-    method: user
+    method: system
   when: current_DE is search("gnome")
