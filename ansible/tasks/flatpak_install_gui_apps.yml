@@ -1,17 +1,17 @@
-- name: Remove the flathub remote from the system installation.
+- name: Remove the flathub remote from the user installation.
   community.general.flatpak_remote:
     name: flathub
     state: absent
     method: user
 
-- name: Add the flathub repository remote to the user installation.
+- name: Add the flathub repository remote to the system installation.
   community.general.flatpak_remote:
     name: flathub
     state: present
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
     method: system
 
-- name: Install gui apps from flathub for current user.
+- name: Install gui apps from flathub for entire system.
   community.general.flatpak:
     name:
       # Manage app premissions.
@@ -35,7 +35,7 @@
     state: present
     method: system
 
-- name: Install gnome gui apps from flathub for current user if DE is gnome.
+- name: Install gnome gui apps from flathub for entire system user if DE is gnome.
   community.general.flatpak:
     name:
       # App to manage Gnome extensions.
