@@ -55,8 +55,11 @@
       # - python-requests
       # Alternative to cat. Shows contents of text files.
       - bat
-      # System monitor.
-      - htop
+      # Not sure how to use this yet. But it's nice that it has many formats as
+      # output.
+      - chroma-bin
+      # System monitor. bottom can be used to look like htop but nicer.
+      # - htop
       # Alternative to grep.
       - ripgrep
       # Interactive version of ripgrep. Use ig to run.
@@ -67,6 +70,9 @@
       - rsync
       # Alternative to ls, shows files and directories with icons. Needs nerd font.
       - lsd
+      # A all in one ls, glow, and more. Use g to launch command. Faster than
+      # lsd but doesn't have as many icons.
+      - g-ls
       # Easier sed command for find and replace.
       - sd
       # TUI alternative for git written in go.
@@ -81,11 +87,11 @@
       - gitui
       # Alternative to cd but much better. It remembers folders visited.
       - zoxide
-      # NOT IN REPOS OR AUR. AUR version is just sorce code.
+      # NOT IN REPOS OR AUR. AUR version is just source code.
       # Clipboard manager for the terminal.
       # https://github.com/savedra1/clipse
       # - clipse
-      # Save, copy, and edit code snippents.
+      # Save, copy, and edit code snippents in the terminal.
       # https://github.com/maaslalani/nap
       # - nap
       # Take images of source code or terminal command output.
@@ -93,13 +99,13 @@
       # - freeze
       # Dotfiles manager.
       - chezmoi
-      # Provides shell components to quickly build goo looking scripts.
+      # Provides shell components to quickly build god looking scripts.
       - gum
-      # Record gifs/videos of terminal commands.
+      # Record gifs/videos of terminal commands. I think it can take pictures.
       - vhs
       # Terminal file manager. move, create, rename, preview files/directories.
       - yazi
-      # Search anything. By default, search files.
+      # Search anything. By default, search files using find.
       - fzf
       - ansible
       # Disk usage analyzer. Launch with dua interactive. Run with "dua i".
@@ -124,7 +130,9 @@
       # - mkvtoolnix-cli
       # Recover deleted files and partitions. Just run and follow directions.
       - testdisk
-      # Check for typos on text files. typos --diff --color alwayst
+      # Terminal music player with vim-like keybindings.
+      - cmus
+      # Check for typos on text files. typos --diff --color always
       - typos
       # Conda alternative but uses pypi repos. Maybe better for python.
       - rye

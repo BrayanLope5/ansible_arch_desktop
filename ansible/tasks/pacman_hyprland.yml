@@ -5,6 +5,9 @@
       - otf-font-awesome
       # Hyprland itself.
       - hyprland
+      # A clipboard for wayland. Mainly needed for clipse to be able to copy
+      # binary data like images.
+      - wl-clipboard
       # Change gtk settings like color and icon theme.
       - nwg-look
       # Allow for screen recording.

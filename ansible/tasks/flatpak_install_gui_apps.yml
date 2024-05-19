@@ -14,12 +14,24 @@
 - name: Install gui apps from flathub for current user.
   community.general.flatpak:
     name:
+      # Manage app premissions.
       - com.github.tchx84.Flatseal
       - us.zoom.Zoom
       - com.brave.Browser
+      # Best image viewer.
       - org.nomacs.ImageLounge
       - io.gitlab.librewolf-community
       - com.dec05eba.gpu_screen_recorder
+      - org.gimp.GIMP
+      # Resynthesizer, a healing tool for gimp. All the following packages
+      # are needed as a dependency.
+      - org.gimp.GIMP.Plugin.Resynthesizer
+      - org.gimp.GIMP.Plugin.LiquidRescale
+      - org.gimp.GIMP.Plugin.Lensfun
+      - org.gimp.GIMP.Plugin.GMic
+      - org.gimp.GIMP.Plugin.Fourier
+      - org.gimp.GIMP.Plugin.FocusBlur
+      - org.gimp.GIMP.Plugin.BIMP
     state: present
     method: system
 

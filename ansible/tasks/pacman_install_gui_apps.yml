@@ -12,8 +12,9 @@
       - hunspell-es_mx
       # Re-arrange pdf pages or remove them or combine multiple pdfs.
       - pdfarranger
-      # GPU accelerated terminal emulator.
-      #- alacritty
+      # GPU accelerated terminal emulator. I still use it to launch tui apps
+      # like clipse fast. Wezterm is slightly slower but noticible.
+      - alacritty
       #- kitty
       - wezterm
       # Disk management, partition resizer, etc.
@@ -22,7 +23,7 @@
       - gpart
       # Simple media player.
       - mpv
-      # Add preview to mpv timeline while moving mouse over it.
+      # Add thumbnail preview to mpv timeline while moving mouse over it.
       # https://github.com/po5/thumbfast
       # Better mpv gui. Make sure to remove binaries that add the ability to
       # download subtitles from the internet.
@@ -36,16 +37,17 @@
       - tesseract-data-eng
       - tesseract-data-spa
       # Change mkv video metadata.
-      - mkvtoolnix-gui
+      # - mkvtoolnix-gui
       # Identify and add metadata to songs.
       - picard
-      # Music player.
-      - strawberry
+      # Music player. A cli music player is better. cmus for example.
+      # - strawberry
       # Torrent client.
       - qbittorrent
       # Easily add/configure printers.
       - system-config-printer
-      - mediaelch
+      # tvnamer the python module works better.
+      # - mediaelch
       # Install flatpaks on the system.
       - flatpak
       # Sync files between computers. Not necessarily a gui ap.
@@ -69,7 +71,8 @@
       # Run darktable-cltest to check if it's working.
       # Don't forget to disable xml creation.
       - darktable
-      # Photoshop alternative.
+      # Photoshop alternative. Some plugins are easier to install with the
+      # flatpak version so that is prefered.
       # - gimp
       # Easier to use stable diffusion with it.
       - krita
