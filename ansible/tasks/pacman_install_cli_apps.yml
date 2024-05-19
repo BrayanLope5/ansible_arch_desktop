@@ -70,6 +70,8 @@
       - rsync
       # Alternative to ls, shows files and directories with icons. Needs nerd font.
       - lsd
+      # Very very very similar to lsd. Not sure what the diferences are.
+      - eza
       # A all in one ls, glow, and more. Use g to launch command. Faster than
       # lsd but doesn't have as many icons.
       - g-ls
