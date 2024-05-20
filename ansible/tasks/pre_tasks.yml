@@ -10,7 +10,7 @@
   # cmd: "echo $XDG_CURRENT_DESKTOP"
   register: current_desktop
 
-- name: Prints two lines of messages, but only if there is an environment value set
+- name: Print the contents of variable current_desktop.
   ansible.builtin.debug:
     msg: "{{current_desktop}}"
 
