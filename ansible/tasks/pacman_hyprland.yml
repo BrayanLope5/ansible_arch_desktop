@@ -5,6 +5,8 @@
       - otf-font-awesome
       # Hyprland itself.
       - hyprland
+      # Utility to set a wallpaper.
+      - hyprpaper
       # A clipboard for wayland. Mainly needed for clipse to be able to copy
       # binary data like images.
       - wl-clipboard
