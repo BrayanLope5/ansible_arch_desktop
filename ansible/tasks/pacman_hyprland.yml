@@ -9,6 +9,8 @@
       - hyprpaper
       # idle utility for hyprland.
       - hypridle
+      # Needed for the hypridle config.
+      - brightnessctl 
       # A clipboard for wayland. Mainly needed for clipse to be able to copy
       # binary data like images.
       - wl-clipboard
