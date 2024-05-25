@@ -16,7 +16,8 @@
       # A clipboard for wayland. Mainly needed for clipse to be able to copy
       # binary data like images.
       - wl-clipboard
-      # Change gtk settings like color and icon theme.
+      # GTK3 settings editor that works on wlroots environment.
+      # Not necessarily for hyprland only.
       - nwg-look
       # Allow for screen recording.
       # - xdg-desktop-portal

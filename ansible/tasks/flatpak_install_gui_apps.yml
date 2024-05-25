@@ -37,6 +37,8 @@
       - org.gimp.GIMP.Plugin.Fourier
       - org.gimp.GIMP.Plugin.FocusBlur
       - org.gimp.GIMP.Plugin.BIMP
+      # Manage gtk/adwaita colors/themes.
+      - com.github.GradienceTeam.Gradience
     state: present
     method: system
 
