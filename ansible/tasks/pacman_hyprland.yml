@@ -5,6 +5,8 @@
       - otf-font-awesome
       # Hyprland itself.
       - hyprland
+      # lock utility for hyprland.
+      - hyprlock
       # Utility to set a wallpaper.
       - hyprpaper
       # idle utility for hyprland.
