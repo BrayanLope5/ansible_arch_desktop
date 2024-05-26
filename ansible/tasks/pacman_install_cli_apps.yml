@@ -99,6 +99,7 @@
       # Take images of source code or terminal command output.
       # https://github.com/charmbracelet/freeze/releases
       # - freeze
+      # Create a single usb to whih you can copy ISOS and install or use live.
       # https://github.com/ventoy/Ventoy/releases
       # - ventoy
       # Dotfiles manager.
