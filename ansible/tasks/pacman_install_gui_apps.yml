@@ -3,6 +3,12 @@
     name:
       - visual-studio-code-bin
       # - chromium
+      # Needed to change qt apps theme.
+      - qt5ct
+      - qt6ct
+      - qt5-wayland
+      - qt6-wayland
+      - kvantum
       # MS Office alternative and spell check tools.
       - libreoffice-fresh
       - hunspell

@@ -25,6 +25,14 @@
       # adw-gtk3 is needed by the Gradience flatpak app to change gtk3 app colors.
       # adwaita colors are directly managed by Gradience without any other dependencies.
       - adw-gtk3
+      # Needed to change qt apps theme.
+      - qt5ct
+      - qt6ct
+      - qt5-wayland
+      - qt6-wayland
+      - kvantum
+      # I like to use Catppuccin-Mocha-Yellow for QT and Ayu Dark for GTK.
+      - kvantum-theme-catppuccin-git
       # Allow for screen recording.
       - xdg-desktop-portal-hyprland
       - xdg-desktop-portal-gtk
