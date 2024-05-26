@@ -17,7 +17,7 @@
       # binary data like images.
       - wl-clipboard
       # GTK3 settings editor that works on wlroots environment.
-      # Not necessarily for hyprland only.
+      # Not necessarily for hyprland only but wayland with wlroots is required.
       - nwg-look
       # Allow for screen recording.
       # - xdg-desktop-portal
