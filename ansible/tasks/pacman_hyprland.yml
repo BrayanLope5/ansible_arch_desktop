@@ -18,9 +18,13 @@
       - wl-clipboard
       # GTK3 settings editor that works on wlroots environment.
       # Not necessarily for hyprland only but wayland with wlroots is required.
+      # Used to manage icons, cursor, and other settings for gtk3 apps.
+      # The Gradience flatpak is used to manage color themes.
       - nwg-look
+      # adw-gtk3 is needed by the Gradience flatpak app to change gtk3 app colors.
+      # adwaita colors are directly managed by Gradience without any other dependencies.
+      - adw-gtk3
       # Allow for screen recording.
-      # - xdg-desktop-portal
       - xdg-desktop-portal-hyprland
       - xdg-desktop-portal-gtk
       - xdg-desktop-portal-kde

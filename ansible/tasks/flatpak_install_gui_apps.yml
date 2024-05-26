@@ -38,7 +38,12 @@
       - org.gimp.GIMP.Plugin.FocusBlur
       - org.gimp.GIMP.Plugin.BIMP
       # Manage gtk/adwaita colors/themes.
+      # Gradience directly manages adwaita color themes and uses adw-gtk3-dark
+      # to change gtk3 colors. adw-gtk-dark needs to be installed in flatpak
+      # and pacman/yay.
       - com.github.GradienceTeam.Gradience
+      - org.gtk.Gtk3theme.adw-gtk3
+      - org.gtk.Gtk3theme.adw-gtk3-dark
     state: present
     method: system
 
