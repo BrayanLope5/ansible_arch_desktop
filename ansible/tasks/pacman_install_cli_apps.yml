@@ -91,14 +91,16 @@
       - zoxide
       # NOT IN REPOS OR AUR. AUR version is just source code.
       # Clipboard manager for the terminal.
-      # https://github.com/savedra1/clipse
+      # https://github.com/savedra1/clipse/releases
       # - clipse
       # Save, copy, and edit code snippents in the terminal.
       # https://github.com/maaslalani/nap
       # - nap
       # Take images of source code or terminal command output.
-      # https://github.com/charmbracelet/freeze
+      # https://github.com/charmbracelet/freeze/releases
       # - freeze
+      # https://github.com/ventoy/Ventoy/releases
+      # - ventoy
       # Dotfiles manager.
       - chezmoi
       # Provides shell components to quickly build god looking scripts.
