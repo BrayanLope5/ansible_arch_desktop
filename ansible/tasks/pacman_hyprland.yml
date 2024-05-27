@@ -44,7 +44,9 @@
       # Notification deamon.
       - swaync
       # Start authentication agent for apps that need a pop up to ask for pass.
-      - polkit-kde-agent
+      # - polkit-kde-agent
+      # The kde polkit was crashing when using kvantum so this is working better.
+      - mate-polkit
       # Applet to connect to wifi/ethernet.
       - network-manager-applet
     state: present
