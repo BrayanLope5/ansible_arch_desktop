@@ -1,0 +1,14 @@
+- name: Start and enable ssh-agent.
+  ansible.builtin.systemd_service:
+    name: ssh-agent.service
+    state: started
+    enabled: true
+    masked: no
+    scope: user
+  environment:
+    SSH_AUTH_SOCK: $XDG_RUNTIME_DIR/ssh-agent.socket
+  #   XDG_RUNTIME_DIR: "/run/user/{{ myuid }}"
+
+# - name: enable ssh-agent
+#   shell: eval $(ssh-agent)
+#   when: '"SSH_AUTH_SOCK" in ansible_env'

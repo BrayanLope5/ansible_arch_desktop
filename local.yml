@@ -41,3 +41,8 @@
       import_tasks: ansible/tasks/flatpak_install_gui_apps.yml
       become: true
       become_user: '{{non_root_user}}'
+
+    - name: Start ssh-agent service.
+      import_tasks: ansible/tasks/systemd/ssh.yml
+      become: true
+      become_user: '{{non_root_user}}'
