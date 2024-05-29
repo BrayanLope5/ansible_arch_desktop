@@ -19,6 +19,10 @@
       # A clipboard for wayland. Mainly needed for clipse to be able to copy
       # binary data like images.
       - wl-clipboard
+      # Needed for screenshoot script.
+      - grim
+      - slurp
+      - hyprpicker
       # GTK3 settings editor that works on wlroots environment.
       # Not necessarily for hyprland only but wayland with wlroots is required.
       # Used to manage icons, cursor, and other settings for gtk3 apps.

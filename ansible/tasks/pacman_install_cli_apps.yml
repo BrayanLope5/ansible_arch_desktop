@@ -135,6 +135,8 @@
       # - mkvtoolnix-cli
       # Recover deleted files and partitions. Just run and follow directions.
       - testdisk
+      # Parse json in the terminal.
+      - jq
       # Terminal music player with vim-like keybindings.
       - cmus
       # Check for typos on text files. typos --diff --color always
