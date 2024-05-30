@@ -87,7 +87,7 @@
       # Very complex audio editor.
       #- ardour
       # Audio editor/recorder.
-      # - audacity
+      - audacity
       # Downloads manager written in java.
       #- jdownloader2
       # - sunshine
