@@ -1,24 +1,44 @@
+# In this section we collect information about the environment to make
+# use of it in other places.
+
+# DE related facts.
+- name: Get name of desktop environment
+  shell: "echo $XDG_CURRENT_DESKTOP"
+  # cmd: "echo $XDG_CURRENT_DESKTOP"
+  register: current_desktop
+
+- name: Convert current_desktop to lowercase such as gnome or plasma. USE current_DE instead of current_desktop variable for other scripts.
+  ansible.builtin.set_fact:
+    # register new fact current_DE, it's just current_desktop but in lower case.
+    current_DE: "{{ current_desktop.stdout | lower }}"
+
+- name: Print the contents of variable current_DE.
+  ansible.builtin.debug:
+    msg: "{{current_DE}}"
+
+# File system format fact.
+- name: Collect the following facts related to he system.
+  ansible.builtin.setup:
+    gather_subset:
+      - mounts
+
+- name: Register new fact file_system_format, it's just ansible_mounts but converted to lower case.
+  ansible.builtin.set_fact:
+    file_system_format: "{{ ansible_mounts | lower }}"
+
+# Make backup if using btrfs.
+- name: Print the contents of file_system_format.
+  ansible.builtin.debug:
+    msg: "{{file_system_format}}"
+
+- name: Make timeshift backup.
+  shell: "timeshift --create --comments 'Made before Ansible made changes.' --tags O"
+  when: ansible_mounts is search("btrfs")
+
+# Start making changes to system.
 - name: Full system upgrade for Arch Linux using Pacman.
   community.general.pacman:
     update_cache: true
     upgrade: true
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
-
-- name: Get name of desktop environment
-  shell: "echo $XDG_CURRENT_DESKTOP"
-  # cmd: "echo $XDG_CURRENT_DESKTOP"
-  register: current_desktop
-
-- name: Print the contents of variable current_desktop.
-  ansible.builtin.debug:
-    msg: "{{current_desktop}}"
-
-- name: Convert current_desktop to lowercase such as gnome or plasma. USE current_DE instead of current_desktop.
-  ansible.builtin.set_fact:
-    current_DE: "{{ current_desktop.stdout | lower }}"
-
-- name: Collect the following facts related to he system.
-  ansible.builtin.setup:
-    gather_subset:
-      - mounts
