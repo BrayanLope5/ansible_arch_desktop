@@ -61,3 +61,10 @@
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
 
+
+# - name: Install packages from AUR using a Pacman compatible AUR helper
+#   community.general.pacman:
+#     name: foo
+#     state: present
+#     executable: yay
+#     extra_args: --builddir /var/cache/ya
