@@ -32,7 +32,7 @@
     msg: "{{file_system_format}}"
 
 - name: Make timeshift backup.
-  shell: "timeshift --create --comments 'Made before Ansible made changes.' --tags O"
+  shell: "timeshift --create --comments 'Made before Ansible made changes.'"
   when: ansible_mounts is search("btrfs")
 
 # Start making changes to system.
