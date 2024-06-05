@@ -171,6 +171,8 @@
       # - texlive-dvisvgm
       # LSP/CLI tool for toml files.
       - taplo-cli
+      # Language server for bash.
+      - bash-language-server
     state: present
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
