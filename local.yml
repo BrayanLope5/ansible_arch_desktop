@@ -42,10 +42,10 @@
       become: true
       become_user: '{{non_root_user}}'
 
-    - name: Symlink downloaded binaries to system bin folder so that it's in path.
-      import_tasks: ansible/tasks/sym_bin_to_path/sym_bin_apps.yml
-      become: true
-      become_user: root
+    # - name: Symlink downloaded binaries to system bin folder so that it's in path.
+    #   import_tasks: ansible/tasks/sym_bin_to_path/sym_bin_apps.yml
+    #   become: true
+    #   become_user: root
 
     - name: Start ssh-agent service.
       import_tasks: ansible/tasks/systemd/ssh.yml
