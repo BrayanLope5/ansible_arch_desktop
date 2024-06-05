@@ -26,6 +26,14 @@
   ansible.builtin.set_fact:
     file_system_format: "{{ ansible_mounts | lower }}"
 
+- name: Register new fact, $HOME environment variable.
+  ansible.builtin.set_fact:
+    nonroot_home: "{{ lookup('env','HOME') }}"
+
+- name: Print the contents of nonroot_home.
+  ansible.builtin.debug:
+    msg: "{{nonroot_home}}"
+
 # Make backup if using btrfs.
 - name: Print the contents of file_system_format.
   ansible.builtin.debug:
