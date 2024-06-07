@@ -47,6 +47,11 @@
     #   become: true
     #   become_user: root
 
+    # - name: Creat symlink from user gtk.css to root gtk.css.
+    #   import_tasks: ansible/tasks/utils/user_root_gtk_symlink.yml
+    #   become: true
+    #   become_user: root
+
     - name: Start ssh-agent service.
       import_tasks: ansible/tasks/systemd/ssh.yml
       become: true
