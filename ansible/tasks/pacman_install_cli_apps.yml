@@ -137,6 +137,8 @@
       - testdisk
       # Parse json in the terminal.
       - jq
+      # Command-line YAML, XML, TOML processor - jq wrapper for YAML/XML/TOML documents
+      - yq
       # Live preview of your command. Example: lshw |& up
       # In the example lshw pipes text into up and now we can use grep or any
       # other tool to interact with that text.
