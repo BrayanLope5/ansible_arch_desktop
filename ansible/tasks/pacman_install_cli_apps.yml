@@ -117,6 +117,8 @@
       - dua-cli
       # Disk usage analyzer. Barely better in some ways than dua.
       - ncdu
+      # Disk usage tui.
+      - duf
       # benchmark commands.
       - hyperfine
       # Metadata reader/write. NOT AVAILABLE ON ARCH REPOS OR AUR.
