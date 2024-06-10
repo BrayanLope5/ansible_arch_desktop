@@ -11,9 +11,10 @@
     path: "{{nonroot_home}}/Applications/bin/clipse/{{item.name}}"
   register: latest_exists
 
+# ERROR: This is not working yet.
 - name: Print the contents of variable latest_exists.
   loop: "{{latest_exists.results}}"
-  when: not item.item.skipped
+  when: not item.item
   ansible.builtin.debug:
     msg: "{{item}}"
 
