@@ -93,6 +93,9 @@
       # Clipboard manager for the terminal.
       # https://github.com/savedra1/clipse/releases
       # - clipse
+      # Create color palattes from images. And use templates to export palatte.
+      # https://codeberg.org/explosion-mental/wallust
+      # - wallust
       # Save, copy, and edit code snippents in the terminal.
       # https://github.com/maaslalani/nap
       # - nap
