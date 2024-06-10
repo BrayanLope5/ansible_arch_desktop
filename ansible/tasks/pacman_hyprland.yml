@@ -23,8 +23,8 @@
       - grim
       - slurp
       - hyprpicker
-      # Needed to send notifications.
-      - notify-send
+      # Needed to send notifications. Provides notify-send command.
+      - libnotify
       # GTK3 settings editor that works on wlroots environment.
       # Not necessarily for hyprland only but wayland with wlroots is required.
       # Used to manage icons, cursor, and other settings for gtk3 apps.

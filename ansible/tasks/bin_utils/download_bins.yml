@@ -1,0 +1,41 @@
+- name: Get api response to find url to latest release of clipse.
+  ansible.builtin.uri:
+      url: https://api.github.com/repos/savedra1/clipse/releases/latest
+      return_content: true
+  register: json_response
+
+- name: Get status of last downlad directory if there is any.
+  loop: "{{ json_response.json.assets }}"
+  when: (item.name is search("linux_amd64.tar.gz"))
+  ansible.builtin.stat:
+    path: "{{nonroot_home}}/Applications/bin/clipse/{{item.name}}"
+  register: latest_exists
+
+- name: Print the contents of variable latest_exists.
+  loop: "{{latest_exists.results}}"
+  when: not item.item.skipped
+  ansible.builtin.debug:
+    msg: "{{item}}"
+
+- name: Recursively remove directory
+  loop: "{{ json_response.json.assets }}"
+  when: (item.name is search("linux_amd64.tar.gz")) and (latest_exists.stat.isdir is undefined and no latest_exists.stat.isdir)
+  ansible.builtin.file:
+    path: "{{nonroot_home}}/Applications/bin/clipse"
+    state: absent
+
+- name: Create directory for clipse if it does not exist.
+  loop: "{{ json_response.json.assets }}"
+  when: (item.name is search("linux_amd64.tar.gz"))
+  ansible.builtin.file:
+    path: "{{nonroot_home}}/Applications/bin/clipse/{{item.name}}"
+    state: directory
+  
+- name: Installing clipse
+  loop: "{{ json_response.json.assets }}"
+  when: (item.name is search("linux_amd64.tar.gz")) and not (latest_exists.stat.isdir is defined and latest_exists.stat.isdir)
+  unarchive:
+    remote_src: yes
+    src: "{{ item.browser_download_url }}"
+    dest: "{{nonroot_home}}/Applications/bin/clipse/{{item.name}}"
+    keep_newer: yes
