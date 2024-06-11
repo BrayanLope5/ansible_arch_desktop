@@ -182,6 +182,8 @@
       - taplo-cli
       # Language server for bash.
       - bash-language-server
+      # Language server for json/jsonc.
+      - vscode-json-languageserver
     state: present
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
