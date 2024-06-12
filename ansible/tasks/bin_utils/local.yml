@@ -16,7 +16,12 @@
   become_user: '{{non_root_user}}'
 
   tasks:
-    - name: Download binary releases from repos not found on arch.
-      import_tasks: download_bins.yml
+    # - name: Download binary releases from repos not found on arch.
+    #   import_tasks: download_bins.yml
+    #   become: true
+    #   become_user: '{{non_root_user}}'
+
+    - name: Download binary of wallust from codeberg.
+      import_tasks: download_wallust.yml
       become: true
       become_user: '{{non_root_user}}'

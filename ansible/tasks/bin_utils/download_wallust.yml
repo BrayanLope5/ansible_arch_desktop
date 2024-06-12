@@ -1,0 +1,42 @@
+- name: Get api response to find url to latest release of clipse.
+  ansible.builtin.uri:
+      url: https://codeberg.org/explosion-mental/wallust/releases/latest
+      return_content: true
+  register: json_response
+
+- name: Get url to latest release which contains version in the url. 
+  ansible.builtin.set_fact:
+    latest_release_url: "{{ json_response | json_query('@.url') }}"
+
+- name: Get latest version as string.
+  ansible.builtin.set_fact:
+    latest_version: "{{ latest_release_url | regex_search('([^\/]+$)') }}"
+
+- name: Print the contents of.
+  ansible.builtin.debug:
+    msg: "{{latest_version}}"
+
+- name: Check if directory with the same name already exists.
+  stat:
+    path: "/home/brayan/Applications/bin/wallust/{{latest_version}}"
+  register: wallust_dir_exists
+
+- name: Remove parent wallust directory if no wallust version dir exists.
+  when: not wallust_dir_exists.stat.exists | bool
+  ansible.builtin.file:
+    path: "/home/brayan/Applications/bin/wallust"
+    state: absent
+
+- name: Create directory for wallust version if parent wallust directory was removed.
+  when: not wallust_dir_exists.stat.exists | bool
+  ansible.builtin.file:
+    path: "/home/brayan/Applications/bin/wallust/{{latest_version}}"
+    state: directory
+
+- name: Installing wallust.
+  when: not wallust_dir_exists.stat.exists | bool
+  unarchive:
+    remote_src: yes
+    src: "https://codeberg.org/explosion-mental/wallust/releases/download/{{latest_version}}/wallust-x86_64-unknown-linux-musl.tar.gz"
+    dest: "/home/brayan/Applications/bin/wallust/{{latest_version}}"
+    keep_newer: yes
