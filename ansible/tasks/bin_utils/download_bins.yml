@@ -8,7 +8,7 @@
   loop: "{{json_response.json.assets}}"
   when: item.name is search("linux_amd64.tar.gz")
   stat:
-    path: "/home/{{non_root_user}}/Applications/bin/clipse/{{item.name}}" 
+    path: "{{nonroot_home}}/Applications/bin/clipse/{{item.name}}" 
   register: result
 
 - name: Check if loping was skipped. If false, then the folder exists and no need to delete clipse folder and download latest.
@@ -21,13 +21,13 @@
 - name: If folder was skipped, true, then remove clipse folder.
   when: not latest_dir_present | bool
   ansible.builtin.file:
-    path: "/home/{{non_root_user}}/Applications/bin/clipse"
+    path: "{{nonroot_home}}/Applications/bin/clipse"
     state: absent
 
 - name: Create directory for clipse version if parent clipse directory was removed.
   when: not latest_dir_present | bool
   ansible.builtin.file:
-    path: "/home/{{non_root_user}}/Applications/bin/clipse/{{linux_latest_release_info[0].name}}"
+    path: "{{nonroot_home}}/Applications/bin/clipse/{{linux_latest_release_info[0].name}}"
     state: directory
   
 - name: Installing clipse
@@ -35,5 +35,5 @@
   unarchive:
     remote_src: yes
     src: "{{linux_latest_release_info[0].browser_download_url}}"
-    dest: "/home/{{non_root_user}}/Applications/bin/clipse/{{linux_latest_release_info[0].name}}"
+    dest: "{{nonroot_home}}/Applications/bin/clipse/{{linux_latest_release_info[0].name}}"
     keep_newer: yes
