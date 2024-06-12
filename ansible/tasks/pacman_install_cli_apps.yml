@@ -116,6 +116,8 @@
       # Search anything. By default, search files using find.
       - fzf
       - ansible
+      # Ansible dependency for json_query. Can also be installed with pip.
+      - python-jmespath
       # Disk usage analyzer. Launch with dua interactive. Run with "dua i".
       - dua-cli
       # Disk usage analyzer. Barely better in some ways than dua.
