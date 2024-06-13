@@ -7,6 +7,10 @@
   # cmd: "echo $XDG_CURRENT_DESKTOP"
   register: current_desktop
 
+- name: Register new fact, $XDG_CURRENT_DESKTOP environment variable as an ansible fact.
+  ansible.builtin.set_fact:
+    current_desktop: "{{ lookup('env','XDG_CURRENT_DESKTOP') }}"
+
 - name: Convert current_desktop to lowercase such as gnome or plasma. USE current_DE instead of current_desktop variable for other scripts.
   ansible.builtin.set_fact:
     # register new fact current_DE, it's just current_desktop but in lower case.
@@ -26,7 +30,7 @@
   ansible.builtin.set_fact:
     file_system_format: "{{ ansible_mounts | lower }}"
 
-- name: Register new fact, $HOME environment variable.
+- name: Register new fact, $HOME environment variable as an ansible fact.
   ansible.builtin.set_fact:
     nonroot_home: "{{ lookup('env','HOME') }}"
 

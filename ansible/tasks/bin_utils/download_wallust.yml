@@ -12,10 +12,6 @@
   ansible.builtin.set_fact:
     latest_version: "{{ latest_release_url | regex_search('([^\/]+$)') }}"
 
-- name: Print the contents of.
-  ansible.builtin.debug:
-    msg: "{{latest_version}}"
-
 - name: Check if directory with the same name already exists.
   stat:
     path: "{{nonroot_home}}/Applications/bin/wallust/{{latest_version}}"

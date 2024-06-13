@@ -4,36 +4,46 @@
       return_content: true
   register: json_response
 
-- name: Check if directory with the same name already exists.
-  loop: "{{json_response.json.assets}}"
-  when: item.name is search("linux_amd64.tar.gz")
-  stat:
-    path: "{{nonroot_home}}/Applications/bin/clipse/{{item.name}}" 
-  register: result
+# - name: Check if directory with the same name already exists.
+#   loop: "{{json_response.json.assets}}"
+#   when: item.name is search("linux_amd64.tar.gz")
+#   stat:
+#     path: "{{nonroot_home}}/Applications/bin/clipse/{{item.name}}" 
+#   register: result
 
-- name: Check if loping was skipped. If false, then the folder exists and no need to delete clipse folder and download latest.
+- name: Get json info of latest linux amd64 release.
   ansible.builtin.set_fact:
-    latest_dir_present: "{{ result | json_query('@.skipped') }}"
-    # linux_latest_release_names: "{{ json_response.json.assets | json_query('@[*].name') }}"
-    # linux_latest_release_names: "{{ json_response.json.assets | json_query('@[*].name' | contains('linux_amd64.tar.gz') == `true` }}"
     linux_latest_release_info: "{{ json_response.json.assets | json_query(\"[?contains(name, 'linux_amd64.tar.gz')]\") }}"
 
-- name: If folder was skipped, true, then remove clipse folder.
-  when: not latest_dir_present | bool
+- name: Get name of latest release.
+  ansible.builtin.set_fact:
+    latest_name: "{{linux_latest_release_info[0].name}}"
+
+- name: Check if directory with the same name already exists.
+  stat:
+    path: "{{nonroot_home}}/Applications/bin/clipse/{{latest_name}}" 
+  register: latest_dir_stat
+
+- name: Print the contents of variable.
+  ansible.builtin.debug:
+    msg: "{{latest_dir_stat.stat.exists}}"
+
+- name: If latest directory for clipse does not exist, then remove parent clipse directory.
+  when: not latest_dir_stat.stat.exists | bool
   ansible.builtin.file:
     path: "{{nonroot_home}}/Applications/bin/clipse"
     state: absent
 
 - name: Create directory for clipse version if parent clipse directory was removed.
-  when: not latest_dir_present | bool
+  when: not latest_dir_stat.stat.exists | bool
   ansible.builtin.file:
-    path: "{{nonroot_home}}/Applications/bin/clipse/{{linux_latest_release_info[0].name}}"
+    path: "{{nonroot_home}}/Applications/bin/clipse/{{latest_name}}" 
     state: directory
   
 - name: Installing clipse
-  when: not latest_dir_present | bool
+  when: not latest_dir_stat.stat.exists | bool
   unarchive:
     remote_src: yes
     src: "{{linux_latest_release_info[0].browser_download_url}}"
-    dest: "{{nonroot_home}}/Applications/bin/clipse/{{linux_latest_release_info[0].name}}"
+    dest: "{{nonroot_home}}/Applications/bin/clipse/{{latest_name}}" 
     keep_newer: yes
