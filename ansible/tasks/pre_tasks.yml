@@ -2,10 +2,10 @@
 # use of it in other places.
 
 # DE related facts.
-- name: Get name of desktop environment
-  shell: "echo $XDG_CURRENT_DESKTOP"
-  # cmd: "echo $XDG_CURRENT_DESKTOP"
-  register: current_desktop
+# - name: Get name of desktop environment
+#   shell: "echo $XDG_CURRENT_DESKTOP"
+#   # cmd: "echo $XDG_CURRENT_DESKTOP"
+#   register: current_desktop
 
 - name: Register new fact, $XDG_CURRENT_DESKTOP environment variable as an ansible fact.
   ansible.builtin.set_fact:
@@ -14,7 +14,7 @@
 - name: Convert current_desktop to lowercase such as gnome or plasma. USE current_DE instead of current_desktop variable for other scripts.
   ansible.builtin.set_fact:
     # register new fact current_DE, it's just current_desktop but in lower case.
-    current_DE: "{{ current_desktop.stdout | lower }}"
+    current_DE: "{{ current_desktop | lower }}"
 
 - name: Print the contents of variable current_DE.
   ansible.builtin.debug:

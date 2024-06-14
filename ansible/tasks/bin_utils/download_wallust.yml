@@ -36,6 +36,8 @@
   when: not wallust_dir_exists.stat.exists | bool
   unarchive:
     remote_src: yes
-    src: "https://codeberg.org/explosion-mental/wallust/releases/download/{{latest_version}}/wallust-x86_64-unknown-linux-musl.tar.gz"
+    # Since I am not using the latest version, and the download url/name of tar file is different.
+    # src: "https://codeberg.org/explosion-mental/wallust/releases/download/{{latest_version}}/wallust-x86_64-unknown-linux-musl.tar.gz"
+    src: "https://codeberg.org/explosion-mental/wallust/releases/download/{{latest_version}}/wallust-{{latest_version}}-x86_64-unknown-linux-musl-with-assets.tar.gz"
     dest: "{{nonroot_home}}/Applications/bin/wallust/{{latest_version}}"
     keep_newer: yes
