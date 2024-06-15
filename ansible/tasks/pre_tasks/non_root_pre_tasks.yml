@@ -1,16 +1,37 @@
-# Make backup if using btrfs.
+# In this section we collect information about the environment to make
+# use of it in other places.
+
+- name: Register new fact, $XDG_CURRENT_DESKTOP environment variable as an ansible fact.
+  ansible.builtin.set_fact:
+    current_desktop: "{{ lookup('env','XDG_CURRENT_DESKTOP') }}"
+
+- name: Convert current_desktop to lowercase such as gnome or plasma. USE current_DE instead of current_desktop variable for other scripts.
+  ansible.builtin.set_fact:
+    # register new fact current_DE, it's just current_desktop but in lower case.
+    current_DE: "{{ current_desktop | lower }}"
+
+- name: Print the contents of variable current_DE.
+  ansible.builtin.debug:
+    msg: "Current DE is: {{current_DE}}"
+
+# File system format fact.
+- name: Collect the following facts related to he system.
+  ansible.builtin.setup:
+    gather_subset:
+      - mounts
+
+- name: Register new fact file_system_format, it's just ansible_mounts but converted to lower case.
+  ansible.builtin.set_fact:
+    file_system_format: "{{ ansible_mounts | lower }}"
+
 - name: Print the contents of file_system_format.
   ansible.builtin.debug:
     msg: "Info about file system format: {{file_system_format}}"
 
-- name: Make timeshift backup.
-  shell: "timeshift --create --comments 'Made before Ansible made changes.'"
-  when: ansible_mounts is search("btrfs")
+- name: Register new fact, $HOME environment variable as an ansible fact.
+  ansible.builtin.set_fact:
+    nonroot_home: "{{ lookup('env','HOME') }}"
 
-# Start making changes to system.
-- name: Full system upgrade for Arch Linux using Pacman.
-  community.general.pacman:
-    update_cache: true
-    upgrade: true
-    # Do not installed already installed packages and assume yes to prompts.
-    extra_args: --needed --noconfirm --ask=4
+- name: Print the contents of nonroot_home.
+  ansible.builtin.debug:
+    msg: "Current user home path is: {{nonroot_home}}"
