@@ -1,15 +1,12 @@
 - name: Start and enable ssh-agent.
   ansible.builtin.systemd_service:
     name: ssh-agent.service
-    state: started
-    enabled: true
+    state: stopped
+    enabled: false
     masked: no
     scope: user
-  # environment:
-  #   SSH_AUTH_SOCK: $XDG_RUNTIME_DIR/ssh-agent.socket
-  #   XDG_RUNTIME_DIR: "/run/user/{{ myuid }}"
 
-- name: Remind to run ssh-add to add keys to ssh-agent if not added yet.
-  ansible.builtin.debug:
-    msg: "Make sure to run: ssh-add to add keys to ssh-agent"
+# - name: Remind to run ssh-add to add keys to ssh-agent if not added yet.
+#   ansible.builtin.debug:
+#     msg: "Make sure to run: ssh-add to add keys to ssh-agent"
 

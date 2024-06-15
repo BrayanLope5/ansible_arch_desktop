@@ -1,0 +1,16 @@
+# Make backup if using btrfs.
+- name: Print the contents of file_system_format.
+  ansible.builtin.debug:
+    msg: "Info about file system format: {{file_system_format}}"
+
+- name: Make timeshift backup.
+  shell: "timeshift --create --comments 'Made before Ansible made changes.'"
+  when: ansible_mounts is search("btrfs")
+
+# Start making changes to system.
+- name: Full system upgrade for Arch Linux using Pacman.
+  community.general.pacman:
+    update_cache: true
+    upgrade: true
+    # Do not installed already installed packages and assume yes to prompts.
+    extra_args: --needed --noconfirm --ask=4
