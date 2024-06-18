@@ -54,6 +54,8 @@
       # Check org.kde.Platform version using: flatpak list | rg org.kde.Platform
       # Then run: sudo flatpak override --env=QT_STYLE_OVERRIDE=kvantum --filesystem=xdg-config/Kvantum:ro
       - org.kde.KStyle.Kvantum
+      # Send files/text over local network.
+      - org.localsend.localsend_app
     state: present
     method: system
 
