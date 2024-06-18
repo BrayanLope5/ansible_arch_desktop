@@ -1,5 +1,8 @@
 #!/usr/bin/env -S ansible-playbook -K
 # This ansible playbook can be run locally using:
+# ./local.yml
+# as an executable and make the changes immediately.
+# OR
 # ansible-playbook local.yml -K
 # OR we can use this command to run it without making any changes.
 # ansible-playbook local.yml -K --diff --check
