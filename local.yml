@@ -1,3 +1,4 @@
+#!/usr/bin/env -S ansible-playbook -K
 # This ansible playbook can be run locally using:
 # ansible-playbook local.yml -K
 # OR we can use this command to run it without making any changes.
@@ -42,8 +43,8 @@
       become: true
       become_user: root
 
-    - name: Install GUI apps using flatpak.
-      import_tasks: ansible/tasks/flatpak_install_gui_apps.yml
+    - name: Install GUI apps using flatpak. No need for root permissions.
+      import_tasks: ansible/tasks/flatpaks/flatpak_install_gui_apps.yml
       become: true
       become_user: '{{non_root_user}}'
 
