@@ -24,9 +24,9 @@
   ansible.builtin.set_fact:
     file_system_format: "{{ ansible_mounts | lower }}"
 
-- name: Print the contents of file_system_format.
+- name: Print the contents of file_system_format. Shows information about all drives.
   ansible.builtin.debug:
-    msg: "Info about file system format: {{file_system_format}}"
+    msg: "{{file_system_format}}"
 
 - name: Register new fact, $HOME environment variable as an ansible fact.
   ansible.builtin.set_fact:
