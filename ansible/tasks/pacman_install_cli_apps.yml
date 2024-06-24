@@ -115,6 +115,8 @@
       - yazi
       # Search anything. By default, search files using find.
       - fzf
+      # View images on terminals. MANY output formats and options.
+      - chafa
       - ansible
       # Ansible dependency for json_query. Can also be installed with pip.
       - python-jmespath
