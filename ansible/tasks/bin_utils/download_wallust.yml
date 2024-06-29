@@ -1,4 +1,4 @@
-- name: Get api response to find url to latest release of clipse.
+- name: Get api response to find url to latest release of wallust.
   ansible.builtin.uri:
 # Not using this url because this gives me the latest stable release.
 #       url: https://codeberg.org/explosion-mental/wallust/releases/latest

@@ -1,4 +1,9 @@
+#!/usr/bin/env -S ansible-playbook -K
+
 # This ansible playbook can be run locally using:
+# ./local.yml
+# as an executable and make the changes immediately.
+# OR
 # ansible-playbook local.yml -K
 # OR we can use this command to run it without making any changes.
 # ansible-playbook local.yml -K --diff --check
@@ -21,7 +26,12 @@
     #   become: true
     #   become_user: '{{non_root_user}}'
 
-    - name: Download binary of wallust from codeberg.
-      import_tasks: download_wallust.yml
+    # - name: Download binary of wallust from codeberg.
+    #   import_tasks: download_wallust.yml
+    #   become: true
+    #   become_user: '{{non_root_user}}'
+
+    - name: Download binary releases from repos not found on arch.
+      import_tasks: download_slides.yml
       become: true
       become_user: '{{non_root_user}}'
