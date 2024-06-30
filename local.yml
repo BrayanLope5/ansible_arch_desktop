@@ -63,6 +63,11 @@
       become: true
       become_user: '{{non_root_user}}'
 
+    - name: Download binary release of ltex-ls.
+      import_tasks: ansible/tasks/bin_utils/download_ltex-ls.yml
+      become: true
+      become_user: '{{non_root_user}}'
+
     - name: Download binary release of moar.
       import_tasks: ansible/tasks/bin_utils/download_moar.yml
       become: true
