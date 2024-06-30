@@ -58,6 +58,16 @@
       become: true
       become_user: '{{non_root_user}}'
 
+    - name: Download binary release of slides.
+      import_tasks: ansible/tasks/bin_utils/download_slides.yml
+      become: true
+      become_user: '{{non_root_user}}'
+
+    - name: Download binary release of moar.
+      import_tasks: ansible/tasks/bin_utils/download_moar.yml
+      become: true
+      become_user: '{{non_root_user}}'
+
     - name: Download binary release of wallust from codeberg.og.
       import_tasks: ansible/tasks/bin_utils/download_wallust.yml
       become: true

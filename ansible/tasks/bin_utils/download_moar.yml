@@ -1,0 +1,47 @@
+- name: Get api response to find url to latest release of moar.
+  ansible.builtin.uri:
+      url: https://api.github.com/repos/walles/moar/releases/latest
+      return_content: true
+  register: json_response
+
+- name: Get json info of latest linux amd64 release.
+  ansible.builtin.set_fact:
+    linux_latest_release_info: "{{ json_response.json.assets | json_query(\"[?contains(name, 'linux-amd64')]\") }}"
+
+- name: Get name of latest release.
+  ansible.builtin.set_fact:
+    latest_name: "{{linux_latest_release_info[0].name}}"
+
+- name: Check if directory with the same name already exists.
+  stat:
+    path: "{{nonroot_home}}/Applications/bin/moar/{{latest_name}}" 
+  register: latest_dir_stat
+
+- name: Print the contents of variable.
+  ansible.builtin.debug:
+    msg: "{{latest_dir_stat.stat.exists}}"
+
+- name: If latest directory for moar does not exist, then remove parent moar directory.
+  when: not latest_dir_stat.stat.exists | bool
+  ansible.builtin.file:
+    path: "{{nonroot_home}}/Applications/bin/moar"
+    state: absent
+
+- name: Create directory for moar version if parent moar directory was removed.
+  when: not latest_dir_stat.stat.exists | bool
+  ansible.builtin.file:
+    path: "{{nonroot_home}}/Applications/bin/moar/{{latest_name}}" 
+    state: directory
+  
+# - name: Installing moar
+#   when: not latest_dir_stat.stat.exists | bool
+#   unarchive:
+#     remote_src: yes
+#     src: "{{linux_latest_release_info[0].browser_download_url}}"
+#     dest: "{{nonroot_home}}/Applications/bin/moar/{{latest_name}}" 
+#     keep_newer: yes
+
+- name: Download moar binary.
+  ansible.builtin.get_url:
+    url: "{{linux_latest_release_info[0].browser_download_url}}"
+    dest: "{{nonroot_home}}/Applications/bin/moar/{{latest_name}}/moar" 
