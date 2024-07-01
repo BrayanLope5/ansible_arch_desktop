@@ -68,6 +68,11 @@
       become: true
       become_user: '{{non_root_user}}'
 
+    - name: Download binary release of dprint.
+      import_tasks: ansible/tasks/bin_utils/download_dprint.yml
+      become: true
+      become_user: '{{non_root_user}}'
+
     - name: Download binary release of moar.
       import_tasks: ansible/tasks/bin_utils/download_moar.yml
       become: true

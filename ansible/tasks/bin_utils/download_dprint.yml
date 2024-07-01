@@ -1,0 +1,42 @@
+- name: Get api response to find url to latest release of dprint.
+  ansible.builtin.uri:
+      url: https://api.github.com/repos/dprint/dprint/releases/latest
+      return_content: true
+  register: json_response
+
+- name: Get json info of latest linux amd64 release.
+  ansible.builtin.set_fact:
+    linux_latest_release_info: "{{ json_response.json.assets | json_query(\"[?contains(name, 'dprint-x86_64-unknown-linux-gnu.zip')]\") }}"
+
+- name: Get name of latest release.
+  ansible.builtin.set_fact:
+    latest_name: "{{linux_latest_release_info[0].name}}"
+
+- name: Check if directory with the same name already exists.
+  stat:
+    path: "{{nonroot_home}}/Applications/bin/dprint/{{latest_name}}" 
+  register: latest_dir_stat
+
+- name: Print the contents of variable.
+  ansible.builtin.debug:
+    msg: "{{latest_dir_stat.stat.exists}}"
+
+- name: If latest directory for dprint does not exist, then remove parent dprint directory.
+  when: not latest_dir_stat.stat.exists | bool
+  ansible.builtin.file:
+    path: "{{nonroot_home}}/Applications/bin/dprint"
+    state: absent
+
+- name: Create directory for dprint version if parent dprint directory was removed.
+  when: not latest_dir_stat.stat.exists | bool
+  ansible.builtin.file:
+    path: "{{nonroot_home}}/Applications/bin/dprint/{{latest_name}}" 
+    state: directory
+  
+- name: Installing dprint
+  when: not latest_dir_stat.stat.exists | bool
+  unarchive:
+    remote_src: yes
+    src: "{{linux_latest_release_info[0].browser_download_url}}"
+    dest: "{{nonroot_home}}/Applications/bin/dprint/{{latest_name}}" 
+    keep_newer: yes
