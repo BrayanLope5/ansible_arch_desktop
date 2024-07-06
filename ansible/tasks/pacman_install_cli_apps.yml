@@ -6,10 +6,12 @@
       - git
       # Used to manage ssh keys and cache them.
       - keychain
-      # Terminal font. Patched with nerd fonts.
+      # Fuzzel and Joplin. Patched with nerd fonts.
       - ttf-firacode-nerd
-      # VS Code font. Patched with nerd fonts.
+      # Terminal and VS Code font. Patched with nerd fonts.
       - ttf-jetbrains-mono-nerd
+      # UI, like swaync, text font. Patched with nerd fonts.
+      - ttf-roboto-mono-nerd
       # Open source google emoji font
       - noto-fonts-emoji
       # For a cli terminal we only need libqalculate and run qalc

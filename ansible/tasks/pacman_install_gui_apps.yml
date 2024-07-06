@@ -18,6 +18,8 @@
       - hunspell-es_mx
       # Re-arrange pdf pages or remove them or combine multiple pdfs.
       - pdfarranger
+      # Easy way to look at fonts installed, their full names, and more.
+      - font-manager
       # GPU accelerated terminal emulator. I still use it to launch tui apps
       # like clipse fast. Wezterm is slightly slower but noticible.
       - alacritty
