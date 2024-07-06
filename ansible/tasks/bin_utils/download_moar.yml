@@ -45,3 +45,5 @@
   ansible.builtin.get_url:
     url: "{{linux_latest_release_info[0].browser_download_url}}"
     dest: "{{nonroot_home}}/Applications/bin/moar/{{latest_name}}/moar" 
+    # Make it executable.
+    mode: '0755'
