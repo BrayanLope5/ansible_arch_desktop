@@ -41,7 +41,7 @@
 #     dest: "{{nonroot_home}}/Applications/bin/moar/{{latest_name}}" 
 #     keep_newer: yes
 
-- name: Download moar binary.
+- name: Download moar binary to use as default pager.
   ansible.builtin.get_url:
     url: "{{linux_latest_release_info[0].browser_download_url}}"
     dest: "{{nonroot_home}}/Applications/bin/moar/{{latest_name}}/moar" 
