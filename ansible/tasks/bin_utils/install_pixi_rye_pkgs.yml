@@ -1,3 +1,6 @@
+# Pixi can only install conda/forge packages globally, not pypi packages.
+# Rye can only install pypi packages.
+
 vars:
   rye_pkgs:
   - tvnamer
