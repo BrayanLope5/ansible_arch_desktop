@@ -1,0 +1,26 @@
+vars:
+  rye_pkgs:
+  - tvnamer
+
+  pixi_pkgs:
+  - ruff-lsp
+  - proselint
+  - black
+  - yt-dlp
+  - pyright
+  - ffmpeg-normalize
+  - numpy
+  - ipykernel
+  - requests
+  - plotly
+  - pandas
+  - nbformat
+
+tasks:
+  - name: Install pixi packages.
+    ansible.builtin.command: pixi global install "{{ item }}"
+    loop: "{{ pixi_pkgs }}"
+
+  - name: Install rye packages.
+    ansible.builtin.command: rye tools install "{{ item }}"
+    loop: "{{ rye_pkgs }}"
