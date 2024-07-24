@@ -1,0 +1,26 @@
+- name: Get api response from GitHub for all repos.
+  ansible.builtin.uri:
+      url: "{{ item }}"
+      return_content: true
+  register: json_response
+  loop:
+    # Clipse.
+    - https://api.github.com/repos/savedra1/clipse/releases/latest
+    # Slides.
+    - https://api.github.com/repos/maaslalani/slides/releases/latest
+
+# FIX: Right now I am just pretending json_response is a single value but it's actually the return of the loop of the first step.
+- name: Get full name of release for linux platform.
+  ansible.builtin.set_fact:
+    linux_latest_release_info: "{{ json_response.json.assets | json_query(\"[?contains(name, '{{ item }}')]\") }}"
+  loop:
+    # Clipse.
+    - 'linux_amd64.tar.gz'
+    # Slides.
+    - 'linux_amd64.tar.gz'
+    # Dprint.
+    - 'dprint-x86_64-unknown-linux-gnu.zip'
+    # ltexls
+    - 'linux-x64.tar.gz'
+    # moar
+    - 'linux-amd64'
