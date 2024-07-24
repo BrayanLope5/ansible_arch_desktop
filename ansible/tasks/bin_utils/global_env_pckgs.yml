@@ -1,0 +1,30 @@
+- name: Already installed pixi packages.
+  ansible.builtin.command: pixi global list
+  register: pixi_installed
+
+- name: Install pixi packages.
+  ansible.builtin.command: pixi global install "{{ item }}"
+  register: result
+  changed_when: result is search("✔ Installed package")
+  when: not pixi_installed is search(item)
+  loop:
+    - ruff-lsp
+    - proselint
+    - black
+    - yt-dlp
+    - pyright
+    - ffmpeg-normalize
+    - numpy
+    - ipykernel
+    - requests
+    - plotly
+    - pandas
+    - nbformat
+  
+- name: Install rye packages.
+  ansible.builtin.command: rye tools install "{{ item }}"
+  register: result
+  ignore_errors: true
+  changed_when: result is search("Installed scripts")
+  loop:
+    - tvnamer

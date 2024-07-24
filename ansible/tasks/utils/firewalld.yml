@@ -1,31 +1,42 @@
-vars:
-  tcp_ports:
-  - 53317 # localsend
-  - 22000 # syncthing
-  - 22067 # syncthing relay
-  - 22070 # syncthing relay
+- name: Set default zone to 'public'
+  ansible.builtin.command: firewall-cmd --set-default-zone=public
+  register: default_zone_set
+  changed_when:
+    - '"ZONE_ALREADY_SET" not in default_zone_set.stderr'
 
-  udp_ports:
-  - 53317 # localsend
-  - 546 # dhcpv6-client
-  - 22000 # syncthing
-  - 21027 # syncthing
+- name: Opening needed tcp ports.
+  ansible.posix.firewalld:
+      zone: public
+      port: "{{ item }}/tcp"
+      permanent: true
+      state: enabled
+      immediate: true
+  loop:
+    - 53317 # localsend
+    - 22000 # syncthing
+    - 22067 # syncthing relay
+    - 22070 # syncthing relay
 
-tasks:
-  - name: Opening needed tcp ports.
-    ansible.posix.firewalld:
-        zone: public
-        port: "{{ item }}/tcp"
-        permanent: true
-        state: enabled
-        immediate: true
-    loop: "{{ tcp_ports }}"
 
-  - name: Opening needed udp ports.
-    ansible.posix.firewalld:
-        zone: public
-        port: "{{ item }}/udp"
-        permanent: true
-        state: enabled
-        immediate: true
-    loop: "{{ tcp_ports }}"
+- name: Opening needed udp ports.
+  ansible.posix.firewalld:
+      zone: public
+      port: "{{ item }}/udp"
+      permanent: true
+      state: enabled
+      immediate: true
+  loop:
+    - 53317 # localsend
+    - 546 # dhcpv6-client
+    - 22000 # syncthing
+    - 21027 # syncthing
+
+- name: Refuse incoming traffic for all listed services.
+  ansible.posix.firewalld:
+    zone: public
+    service: "{{ item }}"
+    permanent: true
+    state: disabled
+    immediate: true
+  loop:
+    - ssh
