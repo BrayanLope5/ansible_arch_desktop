@@ -1,6 +1,7 @@
 - name: Already installed pixi packages.
   ansible.builtin.command: pixi global list
   register: pixi_installed
+  changed_when: False
 
 - name: Install pixi packages.
   ansible.builtin.command: pixi global install "{{ item }}"
