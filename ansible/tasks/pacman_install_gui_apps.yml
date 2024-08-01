@@ -2,7 +2,7 @@
   community.general.pacman:
     name:
       - visual-studio-code-bin
-      # - chromium
+      - chromium
       # Needed to change qt apps theme.
       - qt5ct
       - qt6ct

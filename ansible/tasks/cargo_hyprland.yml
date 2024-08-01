@@ -1,4 +1,0 @@
-- name: Install hyprland ONLY packages with cargo.
-  community.general.cargo:
-    name:
-    - wl-screenrec
