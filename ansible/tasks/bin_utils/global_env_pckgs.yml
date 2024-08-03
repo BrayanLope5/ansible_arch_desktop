@@ -21,6 +21,7 @@
     - plotly
     - pandas
     - nbformat
+    - visidata
   
 - name: Install rye packages.
   ansible.builtin.command: rye tools install "{{ item }}"
