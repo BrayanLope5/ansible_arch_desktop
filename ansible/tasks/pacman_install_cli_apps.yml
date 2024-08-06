@@ -28,6 +28,8 @@
       - starship
       # System monitor. Use btm on terminal.
       - bottom
+      # Can monitor many types of gpus and integrated gpus.
+      - nvtop
       # Better manpages and tldr. Knows about fewer apps than manpages.
       - tealdeer
       # Better shell history search.
