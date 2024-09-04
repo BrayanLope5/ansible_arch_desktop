@@ -81,8 +81,10 @@
       # variable to see if I can tell it which implementation to use.
       # Provides vainfo
       - libva-utils
-      # Needed for wl-screenrec to work on intel igpu laptop.
-      - intel-media-driver
+      # Needed for vaapi to work on newer intel igpus.
+      # - intel-media-driver
+      # Needed for vaapi to work on newer nvidia gpus.
+      # - libva-nvidia-driver
     state: present
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
