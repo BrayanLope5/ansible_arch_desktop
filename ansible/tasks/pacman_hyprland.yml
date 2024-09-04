@@ -62,6 +62,25 @@
       # OTHER APPS that ONLY work on hyprland/wl-roots compositors.
       # Record wiht hardware encoding support.
       - wl-screenrec
+      # Eaach vendor, nvidia, intel, etc, provide a way to use video harware
+      # acceleration. But a lot of software doesn't use that specific way.
+      # Instead they use the more generic form that works on all devices, vaapi.
+      # So, we need the driver for the device to use it's native video hardware
+      # acceleration, such as nvidia/intel drivers. Nvidia offers NVDEC as way
+      # to decode/encode video in NEWER nvidia cards.
+      # But we need a layer to translate between the vaapi calls that mpv or 
+      # wl-screenrec make to NVDEC.
+      # For NEWER nvidia cards this is libva-nvidia-driver, then we have access
+      # to vappi running on newer nvidia cards.
+      # Intel is easier since the driver is pre-installed on most linux distros,
+      # but we still need to the vaapi implementation.
+      # The intel-media-driver works with newer intel cpus and thats all we need
+      # to have acces to vaapi.
+      # WARNING: only use one implementation of vaapi, I am not completely sure,
+      # but I think they overlap in some way. I want to tray to use an env
+      # variable to see if I can tell it which implementation to use.
+      # Provides vainfo
+      - libva-utils
       # Needed for wl-screenrec to work on intel igpu laptop.
       - intel-media-driver
     state: present
