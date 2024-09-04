@@ -59,7 +59,9 @@
       - network-manager-applet
       # pipewire gui for volume control of input/output devices and streams.
       - pavucontrol
+      #
       # OTHER APPS that ONLY work on hyprland/wl-roots compositors.
+      #
       # Record wiht hardware encoding support.
       - wl-screenrec
       # Eaach vendor, nvidia, intel, etc, provide a way to use video harware
