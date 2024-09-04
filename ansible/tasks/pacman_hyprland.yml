@@ -45,6 +45,9 @@
       # Allow for screen recording.
       - xdg-desktop-portal-hyprland
       - xdg-desktop-portal-gtk
+      # Share wayland windows from x11 applications. For example, sharing
+      # firefox window running on wayland on zoom which is an x11 app.
+      - xwaylandvideobridge
       # App launcher.
       - fuzzel
       # A status bar for wayland compositors.
