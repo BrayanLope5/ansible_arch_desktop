@@ -66,7 +66,7 @@
       - network-manager-applet
       - iwd
       # Gui front-end to iwd. Manage wifi network connections.
-      - iwgtk
+      # - iwgtk
       # pipewire gui for volume control of input/output devices and streams.
       - pavucontrol
       #
