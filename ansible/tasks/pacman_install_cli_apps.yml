@@ -3,6 +3,8 @@
     name:
       # Make sure yay, the AUR helper is installed.
       - yay
+      # Paru is the same as yay but it can be faster for searches for example.
+      - paru
       - git
       # Used to manage ssh keys and cache them.
       - keychain
