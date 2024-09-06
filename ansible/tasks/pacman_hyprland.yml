@@ -57,9 +57,16 @@
       # Start authentication agent for apps that need a pop up to ask for pass.
       # - polkit-kde-agent
       # The kde polkit was crashing when using kvantum so this is working better.
+      # On wayland, when an application closes, if anything was copied, it is
+      # lost. This keeps it in memory. A clipboard history manager like
+      # clipse still needs something like this.
+      - wl-clip-persist
       - mate-polkit
       # Applet to connect to wifi/ethernet.
       - network-manager-applet
+      - iwd
+      # Gui front-end to iwd. Manage wifi network connections.
+      - iwgtk
       # pipewire gui for volume control of input/output devices and streams.
       - pavucontrol
       #
