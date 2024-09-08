@@ -39,6 +39,9 @@
       - qt6ct
       - qt5-wayland
       - qt6-wayland
+      # Needed for qt5 apps.
+      - kvantum-qt5
+      # Theme qt6 and qt5 (kvantum-qt5 needed) apps.
       - kvantum
       # I like to use Catppuccin-Mocha-Yellow for QT and Ayu Dark for GTK.
       - kvantum-theme-catppuccin-git
