@@ -27,6 +27,8 @@
     - pandas
     - nbformat
     - visidata
+    - xonsh
+    - nodejs
   
 - name: Install rye packages.
   ansible.builtin.command: rye tools install "{{ item }}"
