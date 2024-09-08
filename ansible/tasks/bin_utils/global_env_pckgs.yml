@@ -1,3 +1,8 @@
+- name: Update pixi packages.
+  ansible.builtin.command: pixi global upgrade-all
+  register: pixi_updated
+  changed_when: False
+
 - name: Already installed pixi packages.
   ansible.builtin.command: pixi global list
   register: pixi_installed
