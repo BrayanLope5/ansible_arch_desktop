@@ -63,7 +63,8 @@
       # On wayland, when an application closes, if anything was copied, it is
       # lost. This keeps it in memory. A clipboard history manager like
       # clipse still needs something like this.
-      - wl-clip-persist
+      # ERROR: This makes wezterm crash right now on text selection.
+      # - wl-clip-persist
       - mate-polkit
       # Applet to connect to wifi/ethernet.
       - network-manager-applet
