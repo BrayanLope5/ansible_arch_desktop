@@ -54,6 +54,10 @@
       - ffmpeg
       # Show metadata of media files.
       - mediainfo
+      # Provides cli tool exiftool. Used to read image metadata.
+      - perl-image-exiftool
+      # Similar to exiftool but newer.
+      - exiv2
       # Rename and tag music files.
       # - beets
       # Requirements for beets to fingerprint files.
