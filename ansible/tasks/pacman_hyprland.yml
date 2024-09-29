@@ -64,7 +64,7 @@
       # lost. This keeps it in memory. A clipboard history manager like
       # clipse still needs something like this.
       # ERROR: This makes wezterm crash right now on text selection.
-      # - wl-clip-persist
+      - wl-clip-persist
       - mate-polkit
       # Applet to connect to wifi/ethernet.
       - network-manager-applet
