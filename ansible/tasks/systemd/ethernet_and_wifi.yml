@@ -17,3 +17,9 @@
     enabled: false
     masked: true
     scope: "system"
+
+
+- name: Create minimal NetworkManager config to use iwd for wifi.
+  ansible.builtin.copy:
+    content: "[device]\nwifi.backend=iwd"
+    dest: /etc/NetworkManager/conf.d/iwd.conf
