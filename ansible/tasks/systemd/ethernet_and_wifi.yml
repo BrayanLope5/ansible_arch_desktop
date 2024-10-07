@@ -1,0 +1,19 @@
+# NEEDS SUDO
+# sudo systemctl stop NetworkManager
+# sudo systemctl disable --now wpa_supplicant
+# sudo systemctl restart NetworkManager
+- name: Start and anable NetworkManager.
+  ansible.builtin.systemd_service:
+    name: NetworkManager
+    state: started
+    enabled: true
+    masked: false
+    scope: "system"
+
+- name: Stop and disable wpa_supplicant.
+  ansible.builtin.systemd_service:
+    name: wpa_supplicant
+    state: stopped
+    enabled: false
+    masked: true
+    scope: "system"

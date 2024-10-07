@@ -76,11 +76,13 @@
       # needed by some applications. Install it if an application is not having
       # it's passwords saved.
       # - libgnome-keyring
+      ##########################################################################
+      # iwd can also be used as a wifi backend for NetworkManager, instead of wpa-supplicant. Although iwd is much newer, it is recommended as a better, nicer wifi backend. This is separate from using iwd as your wifi solution. In this case, NetworkManager will be your general networking solution, but you will be using iwd as the method to handle specifically wifi in the background, and you will use NetworkManager's commandline or GUI tools to connect, rather than iwctl or iwd-related tools.
+      ##########################################################################
       # Applet to connect to wifi/ethernet for NetworkManager.
       - network-manager-applet
-      # ERROR: Needss to be NetworkManager(?) or iwd, not both.
-      # - iwd
-      # Gui front-end to iwd. Manage wifi network connections.
+      - iwd
+      # Gui front-end to iwd. Manage wifi network connections only.
       # - iwgtk
       # pipewire gui for volume control of input/output devices and streams.
       - pavucontrol

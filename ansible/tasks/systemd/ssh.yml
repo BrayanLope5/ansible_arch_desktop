@@ -3,10 +3,5 @@
     name: ssh-agent.service
     state: stopped
     enabled: false
-    masked: no
-    scope: user
-
-# - name: Remind to run ssh-add to add keys to ssh-agent if not added yet.
-#   ansible.builtin.debug:
-#     msg: "Make sure to run: ssh-add to add keys to ssh-agent"
-
+    masked: false
+    scope: "user"
