@@ -66,9 +66,20 @@
       # ERROR: This makes wezterm crash right now on text selection.
       - wl-clip-persist
       - mate-polkit
-      # Applet to connect to wifi/ethernet.
+      # # Provides gnome-keyring-daemon to manage secrets, passwords, ssh and pgp keys.
+      - gnome-keyring
+      # Needed by gnome-keyring to manage secrets of gui apps.
+      - libsecret
+      # Gui application to manage gnome-keyring contents.
+      - seahorse
+      # WARNING: gnome-keyring is prefered but libgnome-keyring sometimes is still
+      # needed by some applications. Install it if an application is not having
+      # it's passwords saved.
+      # - libgnome-keyring
+      # Applet to connect to wifi/ethernet for NetworkManager.
       - network-manager-applet
-      - iwd
+      # ERROR: Needss to be NetworkManager(?) or iwd, not both.
+      # - iwd
       # Gui front-end to iwd. Manage wifi network connections.
       # - iwgtk
       # pipewire gui for volume control of input/output devices and streams.
