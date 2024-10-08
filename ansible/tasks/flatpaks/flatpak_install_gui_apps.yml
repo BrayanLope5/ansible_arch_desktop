@@ -38,9 +38,6 @@
       - org.gimp.GIMP.Plugin.FocusBlur
       - org.gimp.GIMP.Plugin.BIMP
       # Manage gtk/adwaita colors/themes.
-      # Gradience directly manages adwaita color themes and uses adw-gtk3-dark
-      # to change gtk3 colors. adw-gtk-dark needs to be installed in flatpak
-      # and pacman/yay.
       # After installing run this commands:
       # Sets gtk3 theme.
       # gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
@@ -48,7 +45,6 @@
       # gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
       - org.gtk.Gtk3theme.adw-gtk3
       - org.gtk.Gtk3theme.adw-gtk3-dark
-      # - com.github.GradienceTeam.Gradience
       # Needed to change qt applications theme installed via flatpak.
       # You need to install all org.kde.KStyle.Kvantum with the same version of org.kde.Platform
       # Check org.kde.Platform version using: flatpak list | rg org.kde.Platform
