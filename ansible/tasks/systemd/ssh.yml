@@ -1,7 +1,15 @@
-- name: Start and enable ssh-agent.
+- name: Stop and disable ssh-agent for the user.
   ansible.builtin.systemd_service:
     name: ssh-agent.service
     state: stopped
     enabled: false
+    masked: false
+    scope: "user"
+
+- name: Start and enable gcr-ssh-agent for the user.
+  ansible.builtin.systemd_service:
+    name: gcr-ssh-agent.socket
+    state: started
+    enabled: true
     masked: false
     scope: "user"

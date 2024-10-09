@@ -72,6 +72,9 @@
       - libsecret
       # Gui application to manage gnome-keyring contents.
       - seahorse
+      # Various criptographic tools, mainly, gcr-ssh-agent to keep ssh keys in cache.
+      # This may be too low level for me to be controlling.
+      - gcr-4
       # WARNING: gnome-keyring is prefered but libgnome-keyring sometimes is still
       # needed by some applications. Install it if an application is not having
       # it's passwords saved.
