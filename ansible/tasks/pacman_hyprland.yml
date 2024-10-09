@@ -69,6 +69,9 @@
       # # Provides gnome-keyring-daemon to manage secrets, passwords, ssh and pgp keys.
       - gnome-keyring
       # Needed by gnome-keyring to manage secrets of gui apps.
+      # Before this helper can be used, we need to cd to run the following.
+      # cd /usr/share/doc/git/contrib/credential/libsecret
+      # sudo make
       - libsecret
       # Gui application to manage gnome-keyring contents.
       - seahorse
