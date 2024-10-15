@@ -1,5 +1,4 @@
-# Make backup if using btrfs.
-- name: Make timeshift backup.
+- name: Make timeshift backup IFF on a btrfs drive.
   shell: "timeshift --create --comments 'Made before Ansible made changes.'"
   when: ansible_mounts is search("btrfs")
 
