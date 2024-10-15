@@ -33,7 +33,7 @@
       - nwg-look
       # adw-gtk3 is needed by the Gradience flatpak app to change gtk3 app colors.
       # adwaita colors are directly managed by Gradience without any other dependencies.
-      # WARNING: For some reason this packaged dissapeared from the AUR.
+      # This package used to be in the AUR but is now in main repos.
       # - adw-gtk3
       # Needed to change qt apps theme.
       - qt5ct
