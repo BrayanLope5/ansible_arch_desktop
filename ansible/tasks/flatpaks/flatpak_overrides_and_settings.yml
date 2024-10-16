@@ -1,13 +1,19 @@
+- name: Enable kvantum styles for qt flatpaks.
+  shell: "flatpak override --env=QT_STYLE_OVERRIDE=kvantum --filesystem=xdg-config/Kvantum:ro"
+
+- name: Allow flatpak acces to user themes, icons, and gtk3/gtk4 settings/styles.
+  shell: "flatpak override --filesystem=~/.themes --filesystem=xdg-config/gtk-3.0 --filesystem=xdg-config/gtk-4.0 --filesystem=~/.icons"
+
 # Enable kvantum styles for qt flatpaks.
-sudo flatpak override --env=QT_STYLE_OVERRIDE=kvantum --filesystem=xdg-config/Kvantum:ro
+# sudo flatpak override --env=QT_STYLE_OVERRIDE=kvantum --filesystem=xdg-config/Kvantum:ro
 
 # Allow flatpak apps to have access to themes
-sudo flatpak override --filesystem=~/.themes
+# sudo flatpak override --filesystem=~/.themes
 
 
 # Allow flatpak apps to have access to gtk3 and gtk4 settings/styles.
-sudo flatpak override --filesystem=xdg-config/gtk-3.0
-sudo flatpak override --filesystem=xdg-config/gtk-4.0
+# sudo flatpak override --filesystem=xdg-config/gtk-3.0
+# sudo flatpak override --filesystem=xdg-config/gtk-4.0
 
 # Allow flatpak apps to have acces to icons.
-sudo flatpak override --filesystem=~/.icons
+# sudo flatpak override --filesystem=~/.icons
