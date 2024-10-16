@@ -98,7 +98,17 @@
       become: true
       become_user: root
 
-    - name: Stop/disable ssh-agent service.
+    - name: Run make command for git-credential-libsecret.
+      import_tasks: ansible/tasks/systemd/git_credential_libsecret.yml
+      become: true
+      become_user: root
+
+    - name: Run shell commands for flatpak that don't have an ansible module.
+      import_tasks: ansible/tasks/flatpaks/flatpak_overrides_and_settings.yml
+      become: true
+      become_user: root
+
+    - name: Stop/disable ssh-agent service for non-root user.
       import_tasks: ansible/tasks/systemd/ssh.yml
       become: true
       become_user: '{{non_root_user}}'
