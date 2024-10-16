@@ -24,3 +24,5 @@
     - 'linux-x64.tar.gz'
     # moar
     - 'linux-amd64'
+    # nap
+    - linux_amd64.tar.gz
