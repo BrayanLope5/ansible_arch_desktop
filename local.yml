@@ -83,6 +83,11 @@
       become: true
       become_user: '{{non_root_user}}'
 
+    - name: Download binary release of nap.
+      import_tasks: ansible/tasks/bin_utils/download_nap.yml
+      become: true
+      become_user: '{{non_root_user}}'
+
     - name: Download binary release of wallust from codeberg.og.
       import_tasks: ansible/tasks/bin_utils/download_wallust.yml
       become: true
