@@ -52,6 +52,8 @@
       - org.kde.KStyle.Kvantum
       # Send files/text over local network.
       - org.localsend.localsend_app
+      # Streaming client for moonshine.
+      - com.moonlight_stream.Moonlight
     state: present
     method: system
 
