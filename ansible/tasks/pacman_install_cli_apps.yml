@@ -6,8 +6,6 @@
       # Paru is the same as yay but it can be faster for searches for example.
       - paru
       - git
-      # Used to manage ssh keys and cache them.
-      - keychain
       # Fuzzel and Joplin. Patched with nerd fonts.
       - ttf-firacode-nerd
       # Terminal and VS Code font. Patched with nerd fonts.
@@ -22,8 +20,6 @@
       - gnuplot
       # To use this same library but with GUI frontend we need the following.
       # - qalculate-qt
-      # Replaces bash.
-      #- zsh
       # Better interactive shell but non-posix compliant.
       - fish
       # Terminal powerline.
@@ -38,14 +34,10 @@
       - atuin
       # Colors output with rainbow colors.
       - lolcat
-      # To show off system and setup.
-      # - neofetch
       # neofetch alternative written in c.
       - fastfetch
       # neofetch but instead of system details, it gives git details.
       - onefetch
-      # To make pretty pictures of source code.
-      - silicon
       # Tool to manipulate images. Good for resizing.
       - imagemagick
       # Raw image converter.
@@ -101,28 +93,17 @@
       - gitui
       # Alternative to cd but much better. It remembers folders visited.
       - zoxide
-      # NOT IN REPOS OR AUR. AUR version is just source code.
-      # Clipboard manager for the terminal.
-      # https://github.com/savedra1/clipse/releases
-      # - clipse
-      # Create color palattes from images. And use templates to export palatte.
-      # https://codeberg.org/explosion-mental/wallust
-      # - wallust
-      # Save, copy, and edit code snippents in the terminal.
-      # https://github.com/maaslalani/nap
-      # - nap
-      # Take images of source code or terminal command output.
-      # https://github.com/charmbracelet/freeze/releases
-      # - freeze
-      # Create a single usb to whih you can copy ISOS and install or use live.
-      # https://github.com/ventoy/Ventoy/releases
-      # - ventoy
       # Dotfiles manager.
       - chezmoi
       # Provides shell components to quickly build god looking scripts.
       - gum
       # Record gifs/videos of terminal commands. I think it can take pictures.
       - vhs
+      # To make pretty pictures of source code.
+      - silicon
+      # NOT IN REPOS OR AUR. AUR version is just source code.
+      # Take images of source code or terminal command output.
+      # https://github.com/charmbracelet/freeze/releases
       # Terminal file manager. move, create, rename, preview files/directories.
       - yazi
       # Search anything. By default, search files using find.
