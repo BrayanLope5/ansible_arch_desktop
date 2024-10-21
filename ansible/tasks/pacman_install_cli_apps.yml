@@ -121,8 +121,6 @@
       - duf
       # benchmark commands.
       - hyperfine
-      # Metadata reader/write. NOT AVAILABLE ON ARCH REPOS OR AUR.
-      # exiftool
       # Markdown preview from the terminal.
       - glow
       # Alternative to T-mux. A terminal multiplexer.
