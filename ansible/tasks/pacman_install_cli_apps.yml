@@ -97,7 +97,7 @@
       - chezmoi
       # Provides shell components to quickly build god looking scripts.
       - gum
-      # Record gifs/videos of terminal commands. I think it can take pictures.
+      # Record gifs/videos of terminal commands by recording a session or writing script.
       - vhs
       # To make pretty pictures of source code.
       - silicon
