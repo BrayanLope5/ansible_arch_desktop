@@ -1,0 +1,45 @@
+# ERROR: Haven't actually changed anything in this file to make it work for freeze.
+# Freeze github repo: https://github.com/charmbracelet/freeze/releases
+
+- name: Get api response to find url to latest release of slides.
+  ansible.builtin.uri:
+      url: https://api.github.com/repos/maaslalani/slides/releases/latest
+      return_content: true
+  register: json_response
+
+- name: Get json info of latest linux amd64 release.
+  ansible.builtin.set_fact:
+    linux_latest_release_info: "{{ json_response.json.assets | json_query(\"[?contains(name, 'linux_amd64.tar.gz')]\") }}"
+
+- name: Get name of latest release.
+  ansible.builtin.set_fact:
+    latest_name: "{{linux_latest_release_info[0].name}}"
+
+- name: Check if directory with the same name already exists.
+  stat:
+    path: "{{nonroot_home}}/Applications/bin/slides/{{latest_name}}" 
+  register: latest_dir_stat
+
+- name: Print the contents of variable.
+  ansible.builtin.debug:
+    msg: "{{latest_dir_stat.stat.exists}}"
+
+- name: If latest directory for slides does not exist, then remove parent slides directory.
+  when: not latest_dir_stat.stat.exists | bool
+  ansible.builtin.file:
+    path: "{{nonroot_home}}/Applications/bin/slides"
+    state: absent
+
+- name: Create directory for slides version if parent slides directory was removed.
+  when: not latest_dir_stat.stat.exists | bool
+  ansible.builtin.file:
+    path: "{{nonroot_home}}/Applications/bin/slides/{{latest_name}}" 
+    state: directory
+  
+- name: Installing slides
+  when: not latest_dir_stat.stat.exists | bool
+  unarchive:
+    remote_src: yes
+    src: "{{linux_latest_release_info[0].browser_download_url}}"
+    dest: "{{nonroot_home}}/Applications/bin/slides/{{latest_name}}" 
+    keep_newer: yes
