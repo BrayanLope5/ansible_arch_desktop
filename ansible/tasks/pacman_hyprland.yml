@@ -27,12 +27,8 @@
       - libnotify
       # GTK3 settings editor that works on wlroots environment.
       # Not necessarily for hyprland only but wayland with wlroots is required.
-      # Used to manage icons, cursor, and other settings for gtk3 apps.
-      # The Gradience flatpak is used to manage color themes.
       # When installed it also goes by gtk settings.
       - nwg-look
-      # adw-gtk3 is needed by the Gradience flatpak app to change gtk3 app colors.
-      # adwaita colors are directly managed by Gradience without any other dependencies.
       # This package used to be in the AUR but is now in main repos.
       # - adw-gtk3
       # Needed to change qt apps theme.
