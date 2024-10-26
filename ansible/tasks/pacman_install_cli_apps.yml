@@ -76,9 +76,10 @@
       - lsd
       # Very very very similar to lsd. Not sure what the diferences are.
       - eza
+      # I don't really use this, seems too bloated with features.
       # A all in one ls, glow, and more. Use g to launch command. Faster than
       # lsd but doesn't have as many icons.
-      - g-ls
+      # - g-ls
       # Easier sed command for find and replace.
       - sd
       # TUI alternative for git written in go.
