@@ -110,15 +110,16 @@
       # The intel-media-driver works with newer intel cpus and thats all we need
       # to have acces to vaapi.
       # WARNING: only use one implementation of vaapi, I am not completely sure,
-      # but I think they overlap in some way. I want to tray to use an env
+      # but I think they overlap in some way. I want to try to use an env
       # variable to see if I can tell it which implementation to use.
-      # Provides vainfo
+      # Provides vainfo to check for vaapi support.
       - libva-utils
       # Needed for vaapi to work on newer intel igpus.
       # - intel-media-driver
       # Needed for vaapi to work on newer nvidia gpus.
       # - libva-nvidia-driver
-      # The vulkan version of libva-utils used for vaapi.
+      # The vulkan version of libva-utils used for vaapi. 
+      # Provided vulkaninfo to check for vulkan support.
       - vulkan-tools
       # Tool to download list of mirrors from github, rate them, and write them out.
       # Update mirror list for endeavouros and save.
