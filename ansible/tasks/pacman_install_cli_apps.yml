@@ -102,9 +102,8 @@
       - vhs
       # To make pretty pictures of source code.
       - silicon
-      # NOT IN REPOS OR AUR. AUR version is just source code.
-      # Take images of source code or terminal command output.
-      # https://github.com/charmbracelet/freeze/releases
+      # Produces the same type of file as wezterm record. Mainly using it to do asciinema upload FILE/PATH to share recordings.
+      - asciinema
       # Terminal file manager. move, create, rename, preview files/directories.
       - yazi
       # Search anything. By default, search files using find.
