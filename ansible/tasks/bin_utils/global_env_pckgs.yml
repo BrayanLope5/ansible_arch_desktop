@@ -29,6 +29,7 @@
     - visidata
     - xonsh
     - nodejs
+    - deno
   
 - name: Install rye packages.
   ansible.builtin.command: rye tools install "{{ item }}"
