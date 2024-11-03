@@ -1,0 +1,18 @@
+# ERROR: Move the github for initing to a global ansible variable.
+- name: Run chezmoi init in case of config template file changing OR initial run.
+  ansible.builtin.command: firewall-cmd --set-default-zone=public
+  register: default_zone_set
+  changed_when:
+    - '"ZONE_ALREADY_SET" not in default_zone_set.stderr'
+
+- name: Update chezmoi managed files
+  ansible.builtin.command: firewall-cmd --set-default-zone=public
+  register: default_zone_set
+  changed_when:
+    - '"ZONE_ALREADY_SET" not in default_zone_set.stderr'
+
+- name: Apply any changes that need applying for chezmoi.
+  ansible.builtin.command: firewall-cmd --set-default-zone=public
+  register: default_zone_set
+  changed_when:
+    - '"ZONE_ALREADY_SET" not in default_zone_set.stderr'
