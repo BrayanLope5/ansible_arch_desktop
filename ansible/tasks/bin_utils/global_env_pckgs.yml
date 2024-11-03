@@ -1,5 +1,5 @@
 - name: Update pixi packages.
-  ansible.builtin.command: pixi global upgrade-all
+  ansible.builtin.command: pixi global update
   register: pixi_updated
   changed_when: False
 
