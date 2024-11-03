@@ -14,7 +14,7 @@
 
 # ERROR: Move self identifying information to global variables such as the non_root_user variable.
 # Git repos, urls specific to me personally.
-# ERROR: Right now ansible doesn't check which disk is using the btrfs partition. It just runs timeshift if it notices one of the disks has a btrfs file system. I should check that the btrfs file system is used in the boot drive/system drive. Also, some commands/tasks will fail right now on a new installation because some commands/tasks assume for example that timeshift is already configured/installed, same with chezmoi, yay, paru, flatpak, and pixi realated commands.
+# ERROR: Right now ansible doesn't check which disk is using the btrfs partition. It just runs timeshift if it notices one of the disks has a btrfs file system. I should check that the btrfs file system is used in the boot drive/system drive. Also, some commands/tasks will fail right now on a new installation because some commands/tasks assume for example that timeshift is already configured/installed, same with chezmoi, yay, paru, flatpak,firewall/ports commands, systemd, rye, and pixi realated commands.
 
 - name: Setting Up PC
   vars:
