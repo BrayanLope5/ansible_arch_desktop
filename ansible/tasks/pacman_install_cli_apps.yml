@@ -127,6 +127,8 @@
       #- zellij
       # Alternative to neovim/vim/nano.
       - helix
+      # Similar keybinding to helix and more available on repos.
+      - kakoune
       # Automagically source .envrc files on cd.
       - direnv
       # Run arbitrary command on file change.
