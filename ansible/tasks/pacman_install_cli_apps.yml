@@ -129,6 +129,8 @@
       - helix
       # Similar keybinding to helix and more available on repos.
       - kakoune
+      # Use lsps in kakoune. FYI, kak-lsp is a synonym for this package.
+      - kakoune-lsp
       # Automagically source .envrc files on cd.
       - direnv
       # Run arbitrary command on file change.
@@ -185,6 +187,10 @@
       - marksman
       # Tool to upload files to immich server.
       - immich-go
+      # Check spelling in the command line interactively.
+      - aspell
+      # English dictionary for aspell.
+      - aspell-en
     state: present
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
