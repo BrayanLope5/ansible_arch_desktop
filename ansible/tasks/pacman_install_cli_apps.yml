@@ -22,6 +22,8 @@
       # - qalculate-qt
       # Better interactive shell but non-posix compliant.
       - fish
+      # Nushell, data oriented shell. Non-posix. Start with nu command.
+      - nushell
       # Terminal powerline.
       - starship
       # System monitor. Use btm on terminal.
