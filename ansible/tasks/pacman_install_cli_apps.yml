@@ -5,6 +5,10 @@
       - yay
       # Paru is the same as yay but it can be faster for searches for example.
       - paru
+      # Package manger that can be used in most OSs.
+      # FOR NOW, do not use the scripting capabalities, just use it as a 
+      # package manager.
+      - nix
       - git
       # Fuzzel and Joplin. Patched with nerd fonts.
       - ttf-firacode-nerd
@@ -24,6 +28,9 @@
       - fish
       # Nushell, data oriented shell. Non-posix. Start with nu command.
       - nushell
+      # NUSHELL can use json date and jc can convert cli outputs, files such
+      # as yaml to json.
+      - jc
       # Terminal powerline.
       - starship
       # System monitor. Use btm on terminal.
