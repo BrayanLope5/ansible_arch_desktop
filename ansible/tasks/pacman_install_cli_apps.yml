@@ -158,6 +158,8 @@
       - up
       # Terminal music player with vim-like keybindings.
       - cmus
+      # Terminal music player written in rust.
+      - termusic
       # Change the volume of mp3 files without losing quality.
       - mp3gain
       # Check for typos on text files. typos --diff --color always
