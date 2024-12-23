@@ -62,7 +62,6 @@
       # On wayland, when an application closes, if anything was copied, it is
       # lost. This keeps it in memory. A clipboard history manager like
       # clipse still needs something like this.
-      # ERROR: This makes wezterm crash right now on text selection.
       - wl-clip-persist
       # A polkit agent just asks for sudo priviliges for when GUI applications need root acces such as the Timeshift GUI application.
       # This is the polkit agent from the mate desktop which is a gtk3 or 2 (?) application.
