@@ -115,6 +115,8 @@
       - asciinema
       # Terminal file manager. move, create, rename, preview files/directories.
       - yazi
+      # Commandline tool to extract/archive data. Used by yazi and ark.
+      - 7zip
       # Search anything. By default, search files using find.
       - fzf
       # View images on terminals. MANY output formats and options. Mainly used to preview images in terminal.
