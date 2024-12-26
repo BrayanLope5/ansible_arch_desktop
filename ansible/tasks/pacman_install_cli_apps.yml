@@ -173,6 +173,10 @@
       - pixi
       # Use it to manage rust toolchain versions.
       - rustup
+      # rust-analyzer can also be installed with rust up but on arch linux,
+      # this will not add it to ~/.cargo/bin. Instead it will be in the
+      # toolchin direcory at ~/.rustup. This arch package adds it globally.
+      - rust-analyzer
       # JAVA DEVELOPMENT.
       # Java/kotlin build system.
       # - gradle
