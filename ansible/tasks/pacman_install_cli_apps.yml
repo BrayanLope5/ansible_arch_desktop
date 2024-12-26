@@ -171,6 +171,8 @@
       # Conda alternative but can use pypi repos AND conda repos.
       # It can also manage other runtimes, not just python.
       - pixi
+      # Use it to manage rust toolchain versions.
+      - rustup
       # JAVA DEVELOPMENT.
       # Java/kotlin build system.
       # - gradle
