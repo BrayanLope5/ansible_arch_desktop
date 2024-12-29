@@ -50,6 +50,8 @@
       - picard
       # Music player. A cli music player is better. cmus for example.
       # - strawberry
+      # Uses ffmpeg in the backend to transcode videos.
+      - handbrake
       # Torrent client.
       - qbittorrent
       # Easily add/configure printers.
