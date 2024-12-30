@@ -192,7 +192,7 @@
       # - omnisharp-roslyn
       # Language sever for yaml documents. Needed for Helix.
       - yaml-language-server
-      # Tex file editing dependency packages.
+      # Latex, tex file editing dependency packages.
       # - texlive
       # dvisvgm can convert tex files source files and pdfs to svg.
       # - texlive-dvisvgm
