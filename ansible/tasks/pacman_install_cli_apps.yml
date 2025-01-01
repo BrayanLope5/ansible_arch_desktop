@@ -154,6 +154,8 @@
       - kakoune
       # Use lsps in kakoune. FYI, kak-lsp is a synonym for this package.
       - kakoune-lsp
+      # Markdown note taking.
+      - zettlr
       # Automagically source .envrc files on cd.
       - direnv
       # Run arbitrary command on file change.
