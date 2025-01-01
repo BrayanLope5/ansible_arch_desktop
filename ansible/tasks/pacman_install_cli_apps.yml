@@ -11,6 +11,7 @@
       # WARNING: For us to be able to use nix we need to add our user to the
       # nix-users group.
       # sudo usermod -a -G nix-users (whoami)
+      # TODO: There is probably an ansible module to add users to groups.
       - nix
       - git
       # Fuzzel and Joplin. Patched with nerd fonts.
