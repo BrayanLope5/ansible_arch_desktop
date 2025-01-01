@@ -12,6 +12,14 @@
       # nix-users group.
       # sudo usermod -a -G nix-users (whoami)
       # TODO: There is probably an ansible module to add users to groups.
+      # After adding user to group, we need to also enable and start the nix-daemon.service
+      # sudo systemctl enable nix-daemon.service
+      # sudo systemctl start nix-daemon.service
+      # Then we have to add a nix channel. The unstable channel should be fine
+      # since I'll probably be only using cli applications and they are only
+      # added to the PATH when opening fish shell.
+      # nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+      # nix-channel --update
       - nix
       - git
       # Fuzzel and Joplin. Patched with nerd fonts.
