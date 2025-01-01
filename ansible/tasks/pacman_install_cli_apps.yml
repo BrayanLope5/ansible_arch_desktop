@@ -8,6 +8,9 @@
       # Package manger that can be used in most OSs.
       # FOR NOW, do not use the scripting capabalities, just use it as a 
       # package manager.
+      # WARNING: For us to be able to use nix we need to add our user to the
+      # nix-users group.
+      # sudo usermod -a -G nix-users (whoami)
       - nix
       - git
       # Fuzzel and Joplin. Patched with nerd fonts.
