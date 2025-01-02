@@ -23,13 +23,13 @@
   connection: local
   become: true
   become_method: sudo
-  become_user: '{{non_root_user}}'
+  become_user: "{{non_root_user}}"
 
   pre_tasks:
     - name: Collect facts about system. No need for sudo.
       import_tasks: ansible/tasks/pre_tasks/non_root_pre_tasks.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Update using pacman and make backup if on btrfs system.
       import_tasks: ansible/tasks/pre_tasks/root_pre_tasks.yml
@@ -60,57 +60,57 @@
     - name: Install GUI apps using flatpak. No need for root permissions.
       import_tasks: ansible/tasks/flatpaks/flatpak_install_gui_apps.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Download binary releases from repos not found on arch.
       import_tasks: ansible/tasks/bin_utils/download_clipse.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Download binary release of slides.
       import_tasks: ansible/tasks/bin_utils/download_slides.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Download binary release of ltex-ls.
       import_tasks: ansible/tasks/bin_utils/download_ltexls.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Download binary release of dprint.
       import_tasks: ansible/tasks/bin_utils/download_dprint.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Download binary release of moar.
       import_tasks: ansible/tasks/bin_utils/download_moar.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Download binary release of nap.
       import_tasks: ansible/tasks/bin_utils/download_nap.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Download binary release of freeze.
       import_tasks: ansible/tasks/bin_utils/download_freeze.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Download binary release of carapace.
       import_tasks: ansible/tasks/bin_utils/download_carapace.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Download binary release of ventoy.
       import_tasks: ansible/tasks/bin_utils/download_ventoy.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Download binary release of wallust from codeberg.og.
       import_tasks: ansible/tasks/bin_utils/download_wallust.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Install pixi and rye packages.
       import_tasks: ansible/tasks/bin_utils/global_env_pckgs.yml
@@ -135,7 +135,7 @@
     - name: Stop/disable ssh-agent service for non-root user.
       import_tasks: ansible/tasks/systemd/ssh.yml
       become: true
-      become_user: '{{non_root_user}}'
+      become_user: "{{non_root_user}}"
 
     - name: Ethernet/Wifi. Stop/disable wpa_supplicant, enable/start NetworkManager, create minimial NetworkManager config to use iwd for wifi.
       import_tasks: ansible/tasks/systemd/ethernet_and_wifi.yml

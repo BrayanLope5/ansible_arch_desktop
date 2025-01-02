@@ -1,8 +1,6 @@
 - name: From repos AND AUR, install GUI apps and their dependencies using pacman.
   community.general.pacman:
     name:
-      - visual-studio-code-bin
-      - chromium
       # Needed to change qt apps theme.
       - qt5ct
       - qt6ct
@@ -97,6 +95,12 @@
       # - sunshine
       # - moonlight
       # - joplin
+      # Zed and lapce are both performance driven editors with great vim
+      # motion support.
+      - zed
+      - lapce
+      # Markdown note taking.
+      - zettlr
     state: present
     # Do not installed already installed packages and assume yes to prompts.
     extra_args: --needed --noconfirm --ask=4
