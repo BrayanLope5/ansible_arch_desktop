@@ -95,7 +95,7 @@
       - rsync
       # Alternative to ls, shows files and directories with icons. Needs nerd font.
       - lsd
-      # Very very very similar to lsd. Not sure what the diferences are.
+      # Very very very similar to lsd. Not sure what the differences are.
       - eza
       # Easier sed command for find and replace.
       - sd
@@ -178,7 +178,7 @@
       - rustup
       # rust-analyzer can also be installed with rust up but on arch linux,
       # this will not add it to ~/.cargo/bin. Instead it will be in the
-      # toolchin direcory at ~/.rustup. This arch package adds it globally.
+      # toolchin directory at ~/.rustup. This arch package adds it globally.
       - rust-analyzer
       # Language sever for yaml documents. Needed for Helix.
       - yaml-language-server
