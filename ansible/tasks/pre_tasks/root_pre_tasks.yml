@@ -7,5 +7,3 @@
   community.general.pacman:
     update_cache: true
     upgrade: true
-    # Do not installed already installed packages and assume yes to prompts.
-    extra_args: --needed --noconfirm --ask=4

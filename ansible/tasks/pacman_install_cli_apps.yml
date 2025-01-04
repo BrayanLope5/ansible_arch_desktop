@@ -201,8 +201,6 @@
       # English dictionary for aspell.
       - aspell-en
     state: present
-    # Do not installed already installed packages and assume yes to prompts.
-    extra_args: --needed --noconfirm --ask=4
 
 - name: Remove conflicting packages.
   community.general.pacman:

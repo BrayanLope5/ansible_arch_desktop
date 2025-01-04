@@ -17,7 +17,7 @@
       - pipewire
       - wireplumber
       # Needed for the hypridle config.
-      - brightnessctl 
+      - brightnessctl
       # A clipboard for wayland. Mainly needed for clipse to be able to copy
       # binary data like images.
       - wl-clipboard
@@ -100,7 +100,7 @@
       # So, we need the driver for the device to use it's native video hardware
       # acceleration, such as nvidia/intel drivers. Nvidia offers NVDEC as way
       # to decode/encode video in NEWER nvidia cards.
-      # But we need a layer to translate between the vaapi calls that mpv or 
+      # But we need a layer to translate between the vaapi calls that mpv or
       # wl-screenrec make to NVDEC.
       # For NEWER nvidia cards this is libva-nvidia-driver, then we have access
       # to vappi running on newer nvidia cards.
@@ -117,7 +117,7 @@
       # - intel-media-driver
       # Needed for vaapi to work on newer nvidia gpus.
       # - libva-nvidia-driver
-      # Similar to libva-utils used for vaapi. Provides info about the vulakn 
+      # Similar to libva-utils used for vaapi. Provides info about the vulakn
       # supporting hardware.
       # Provides vulkaninfo cli to check for vulkan support.
       - vulkan-tools
@@ -133,10 +133,6 @@
       # sudo rate-mirrors --allow-root --save /etc/pacman.d/mirrorlist arch
       - rate-mirrors
     state: present
-    # Do not installed already installed packages and assume yes to prompts.
-    extra_args: --needed --noconfirm --ask=4
-
-
 # - name: Install packages from AUR using a Pacman compatible AUR helper
 #   community.general.pacman:
 #     name: foo
