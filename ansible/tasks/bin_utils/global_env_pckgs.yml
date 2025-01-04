@@ -30,6 +30,8 @@
     - xonsh
     - nodejs
     - deno
+    # For use with typos cli tool. There is a zed editor extention.
+    - typos-lsp
   
 - name: Install rye packages.
   ansible.builtin.command: rye tools install "{{ item }}"
