@@ -117,9 +117,15 @@
       # - intel-media-driver
       # Needed for vaapi to work on newer nvidia gpus.
       # - libva-nvidia-driver
-      # The vulkan version of libva-utils used for vaapi. 
-      # Provided vulkaninfo to check for vulkan support.
+      # Similar to libva-utils used for vaapi. Provides info about the vulakn 
+      # supporting hardware.
+      # Provides vulkaninfo cli to check for vulkan support.
       - vulkan-tools
+      # Different implementations of vulkan drivers are provided by different
+      # hardware manufacturer such as nvidia, amd, intel, etc.
+      # Searching `vulkan-` on arch linux will shows all available vulkan providers.
+      # On my HP laptop with no graphics card, just an intel cpu with integrated
+      # graphics, I had to install the pacakge named, vulkan-intel.
       # Tool to download list of mirrors from github, rate them, and write them out.
       # Update mirror list for endeavouros and save.
       # sudo rate-mirrors --allow-root --save /etc/pacman.d/endeavouros-mirrorlist endeavouros
