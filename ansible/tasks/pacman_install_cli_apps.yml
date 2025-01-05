@@ -30,6 +30,8 @@
       - ttf-roboto-mono-nerd
       # Open source google emoji font
       - noto-fonts-emoji
+      # Trying out this font.
+      - ttf-iosevka-nerd
       # For a cli terminal we only need libqalculate and run qalc
       - libqalculate
       # Needed by qalc to display plots using the plot() function.
