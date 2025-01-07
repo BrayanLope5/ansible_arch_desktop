@@ -30,7 +30,10 @@
       - ttf-roboto-mono-nerd
       # Open source google emoji font
       - noto-fonts-emoji
-      # Trying out this font.
+      # There are A LOT of options for this font.
+      # This version supposedly works better on terminals.
+      - ttf-iosevkaterm-nerd
+      # This probably for gui editors.
       - ttf-iosevka-nerd
       # For a cli terminal we only need libqalculate and run qalc
       - libqalculate
