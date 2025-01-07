@@ -155,7 +155,6 @@
       - direnv
       # Run arbitrary command on file change.
       - entr
-      - neovim-nightly-bin
       # Recover deleted files and partitions. Just run and follow directions.
       - testdisk
       # Parse json in the terminal.
