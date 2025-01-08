@@ -28,13 +28,10 @@
       - ttf-jetbrains-mono-nerd
       # UI, like swaync, text font. Patched with nerd fonts.
       - ttf-roboto-mono-nerd
+      # This is a really thick font, very legible.
+      - ttf-cascadia-code-nerd
       # Open source google emoji font
       - noto-fonts-emoji
-      # There are A LOT of options for this font.
-      # This version supposedly works better on terminals.
-      - ttf-iosevkaterm-nerd
-      # This probably for gui editors.
-      - ttf-iosevka-nerd
       # For a cli terminal we only need libqalculate and run qalc
       - libqalculate
       # Needed by qalc to display plots using the plot() function.
