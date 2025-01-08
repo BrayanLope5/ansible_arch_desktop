@@ -15,6 +15,7 @@
   when: not pixi_installed is search(item)
   loop:
     - typos-lsp
+    - ruff
     - ruff-lsp
     - proselint
     - black
