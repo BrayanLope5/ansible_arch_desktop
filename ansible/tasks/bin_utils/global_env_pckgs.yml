@@ -35,10 +35,10 @@
     # For use with typos cli tool. There is a zed editor extention.
     - typos-lsp
   
-- name: Install rye packages.
-  ansible.builtin.command: rye tools install "{{ item }}"
-  register: result
-  ignore_errors: true
-  changed_when: result is search("Installed scripts")
-  loop:
-    - tvnamer
+# - name: Install rye packages.
+#   ansible.builtin.command: rye tools install "{{ item }}"
+#   register: result
+#   ignore_errors: true
+#   changed_when: result is search("Installed scripts")
+#   loop:
+#     - tvnamer
