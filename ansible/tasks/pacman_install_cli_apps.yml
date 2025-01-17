@@ -103,6 +103,9 @@
       - sd
       # TUI alternative for git written in go.
       - lazygit
+      # Lazygit has MANY good and simple features. Soft serve is even simpler.
+      # Launch with soft
+      - soft-serve
       # Better diff/pager.
       - git-delta
       # Another diff alternative but that understands syntax. Run with difft
