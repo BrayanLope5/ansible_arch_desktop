@@ -16,8 +16,10 @@
       # To make sure screensharing works.
       - pipewire
       - wireplumber
-      # Needed for the hypridle config.
+      # Used to control laptop screen/backlight brightness.
       - brightnessctl
+      # Control external display brightness, contrast, and more.
+      - ddcutil
       # A clipboard for wayland. Mainly needed for clipse to be able to copy
       # binary data like images.
       - wl-clipboard
