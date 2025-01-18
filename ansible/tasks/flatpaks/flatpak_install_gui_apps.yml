@@ -19,6 +19,8 @@
 - name: Install gui apps from flathub for entire system.
   community.general.flatpak:
     name:
+      # Manage EVERYTHING flatpak apps realated settings.
+      - io.github.flattool.Warehouse
       # Manage app premissions.
       - com.github.tchx84.Flatseal
       - us.zoom.Zoom
