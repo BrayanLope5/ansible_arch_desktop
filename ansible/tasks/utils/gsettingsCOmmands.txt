@@ -1,0 +1,14 @@
+gsettings set org.gnome.desktop.interface color-scheme
+gsettings set org.gnome.desktop.interface cursor-size 
+gsettings set org.gnome.desktop.interface cursor-theme 
+gsettings set org.gnome.desktop.interface font-antialiasing \'rgba\'
+gsettings set org.gnome.desktop.interface enable-animations true 
+gsettings set org.gnome.desktop.interface font-hinting \'full\' 
+gsettings set org.gnome.desktop.interface font-name \'Noto\ Sans\ 16\' 
+gsettings set org.gnome.desktop.interface font-rgba-order \'rgba\' 
+gsettings set org.gnome.desktop.interface gtk-color-scheme 
+gsettings set org.gnome.desktop.interface gtk-theme \'WhiteSur-Dark-solid\' 
+gsettings set org.gnome.desktop.interface icon-theme \'WhiteSur\' 
+gsettings set org.gnome.desktop.interface monospace-font-name \'JetBrainsMono\ Nerd\ Font\ 16\'
+gsettings set org.gnome.desktop.interface scaling-factor uint32\ 0 
+gsettings set org.gnome.desktop.interface text-scaling-factor 1.0
