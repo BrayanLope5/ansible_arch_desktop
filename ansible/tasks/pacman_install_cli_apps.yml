@@ -204,6 +204,8 @@
       - aspell
       # English dictionary for aspell.
       - aspell-en
+      # Download, run, manage llm models from the commandline.
+      - ollama
     state: present
 
 - name: Remove conflicting packages.
