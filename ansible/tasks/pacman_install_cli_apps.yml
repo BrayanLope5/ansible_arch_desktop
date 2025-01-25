@@ -207,8 +207,9 @@
       - aspell
       # English dictionary for aspell.
       - aspell-en
+      # NOT WORTH THE CPU/GPU power needed to run it.
       # Download, run, manage llm models from the commandline.
-      - ollama
+      # - ollama
     state: present
 
 - name: Remove conflicting packages.
