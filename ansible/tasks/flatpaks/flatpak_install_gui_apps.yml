@@ -56,6 +56,8 @@
       - org.localsend.localsend_app
       # Streaming client for moonshine.
       - com.moonlight_stream.Moonlight
+      # 3rt party YouTube client. No ads, more control.
+      - io.freetubeapp.FreeTube
     state: present
     method: system
 
