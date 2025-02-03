@@ -30,6 +30,7 @@
     - 546 # dhcpv6-client
     - 22000 # syncthing
     - 21027 # syncthing
+    - 12315 # Graybrid sync
 
 - name: Refuse incoming traffic for all listed services.
   ansible.posix.firewalld:
