@@ -16,7 +16,7 @@
     - 22000 # syncthing
     - 22067 # syncthing relay
     - 22070 # syncthing relay
-
+    - 12315 # Graybrid sync
 
 - name: Opening needed udp ports.
   ansible.posix.firewalld:
