@@ -16,7 +16,7 @@
     - 22000 # syncthing
     - 22067 # syncthing relay
     - 22070 # syncthing relay
-    - 12315 # Graybrid sync
+    # - 12315 # Grayjay sync
 
 - name: Opening needed udp ports.
   ansible.posix.firewalld:
@@ -30,7 +30,7 @@
     - 546 # dhcpv6-client
     - 22000 # syncthing
     - 21027 # syncthing
-    - 12315 # Graybrid sync
+    # - 12315 # Grayjay sync
 
 - name: Refuse incoming traffic for all listed services.
   ansible.posix.firewalld:
