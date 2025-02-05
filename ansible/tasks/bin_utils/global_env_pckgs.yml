@@ -30,7 +30,8 @@
     - nbformat
     - visidata
     - xonsh
-    - nodejs
+    # I am goint to see if I can just use deno only.
+    # - nodejs
     - deno
     # For use with typos cli tool. There is a zed editor extention.
     - typos-lsp
