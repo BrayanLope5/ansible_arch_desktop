@@ -55,6 +55,8 @@
     - carapace
     # Pager with vim keybindings.
     - moar
+    # Formatter for many langueges that supports extensions.
+    - dprint
   
 # - name: Install rye packages.
 #   ansible.builtin.command: rye tools install "{{ item }}"
