@@ -14,28 +14,47 @@
   changed_when: result is search("✔ Installed package")
   when: not pixi_installed is search(item)
   loop:
+    # Use typos as an lsp. It is also a cli tool.
     - typos-lsp
+    # Python formatter and linter written in rust.
     - ruff
+    # Use ruff as an lsp.
     - ruff-lsp
+    # Check for grammar error in source code.
     - proselint
+    # Format python conde written in python. Ruff is a better option now.
     - black
+    # Download youtube videos/audio.
     - yt-dlp
+    # Python lsp from microsoft.
     - pyright
+    # Normalize the audio on video so it closer in volume for the duration.
     - ffmpeg-normalize
+    # Numerical computation for python.
     - numpy
+    # Needed for python and jupyter notebooks integration.
     - ipykernel
+    # Easily make http/https requests on python.
     - requests
+    # Plotting made easier on python.
     - plotly
+    # Pandas for tables on python.
     - pandas
+    # Required for pandas on python.
     - nbformat
+    # Visualize different file formats in a table.
     - visidata
+    # Shell that uses python.
     - xonsh
     # I am goint to see if I can just use deno only.
     # - nodejs
     - deno
     # For use with typos cli tool. There is a zed editor extention.
     - typos-lsp
+    # Autocomplete for terminals.
     - carapace
+    # Pager with vim keybindings.
+    - moar
   
 # - name: Install rye packages.
 #   ansible.builtin.command: rye tools install "{{ item }}"
