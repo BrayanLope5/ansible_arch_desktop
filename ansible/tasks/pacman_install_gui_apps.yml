@@ -93,6 +93,8 @@
       # Downloads manager written in java.
       #- jdownloader2
       # - sunshine
+      # MD editor that looks good.
+      # - marktext
       # Zed and lapce are both performance driven editors with great vim
       # motion support.
       - zed
