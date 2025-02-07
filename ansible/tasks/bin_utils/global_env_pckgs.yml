@@ -55,8 +55,10 @@
     - carapace
     # Pager with vim keybindings.
     - moar
+    # So far I have only used it wih markdown but deno can also do it so thats
+    # what I am switching to.
     # Formatter for many langueges that supports extensions.
-    - dprint
+    # - dprint
   
 # - name: Install rye packages.
 #   ansible.builtin.command: rye tools install "{{ item }}"
