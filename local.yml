@@ -97,10 +97,10 @@
       become: true
       become_user: "{{non_root_user}}"
 
-    - name: Download binary release of carapace.
-      import_tasks: ansible/tasks/bin_utils/download_carapace.yml
-      become: true
-      become_user: "{{non_root_user}}"
+    # - name: Download binary release of carapace.
+    #   import_tasks: ansible/tasks/bin_utils/download_carapace.yml
+    #   become: true
+    #   become_user: "{{non_root_user}}"
 
     - name: Download binary release of ventoy.
       import_tasks: ansible/tasks/bin_utils/download_ventoy.yml
