@@ -59,6 +59,10 @@
     # what I am switching to.
     # Formatter for many langueges that supports extensions.
     # - dprint
+    # "Record" your terminal session as a text file that can be replayed without
+    # actually running any commands. Wezterm can also do this but asciinema makes
+    # it easy to share reordings online with a one command upload without an account.
+    - asciinema
   
 # - name: Install rye packages.
 #   ansible.builtin.command: rye tools install "{{ item }}"
