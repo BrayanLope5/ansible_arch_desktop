@@ -14,8 +14,6 @@
   changed_when: result is search("✔ Installed package")
   when: not pixi_installed is search(item)
   loop:
-    # Use typos as an lsp. It is also a cli tool.
-    - typos-lsp
     # Python formatter and linter written in rust.
     - ruff
     # Use ruff as an lsp.
@@ -49,7 +47,7 @@
     # I am goint to see if I can just use deno only.
     # - nodejs
     - deno
-    # For use with typos cli tool. There is a zed editor extention.
+    # Use typos cli tool as an lsp. There is a zed editor extension.
     - typos-lsp
     # Autocomplete for terminals.
     - carapace
