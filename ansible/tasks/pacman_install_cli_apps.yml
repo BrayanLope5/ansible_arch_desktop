@@ -203,13 +203,14 @@
       # - docker-compose
       # Tool to upload files to immich server.
       - immich-go
-      # Check spelling in the command line interactively.
+      # Check spelling/grammar/typos in the command line interactively.
       - aspell
       # English dictionary for aspell.
       - aspell-en
       # NOT WORTH THE CPU/GPU power needed to run it.
       # Download, run, manage llm models from the commandline.
       # - ollama
+      - harper
     state: present
 
 - name: Remove conflicting packages.
