@@ -199,8 +199,8 @@
       # Language server for makdown. Does not format, need dprint.
       - marksman
       # Run containers.
-      - docker
-      - docker-compose
+      # - docker
+      # - docker-compose
       # Tool to upload files to immich server.
       - immich-go
       # Check spelling in the command line interactively.
