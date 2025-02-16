@@ -57,8 +57,6 @@
     # what I am switching to.
     # Formatter for many langueges that supports extensions.
     # - dprint
-    # Grammar/spelling/typos checker.
-    - harper-ls
   
 # - name: Install rye packages.
 #   ansible.builtin.command: rye tools install "{{ item }}"
