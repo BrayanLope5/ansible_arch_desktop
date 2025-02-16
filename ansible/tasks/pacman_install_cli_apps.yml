@@ -171,7 +171,7 @@
       - termusic
       # Change the volume of mp3 files without losing quality.
       - mp3gain
-      # Check for typos on text files. typos --diff --color always
+      # Check for typos/grammar on text files. typos --diff --color always
       - typos
       # Conda alternative but uses pypi repos. Maybe better for python.
       - uv
