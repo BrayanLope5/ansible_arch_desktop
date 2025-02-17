@@ -82,9 +82,6 @@
       # - python-requests
       # Alternative to cat. Shows contents of text files.
       - bat
-      # Not sure how to use this yet. But it's nice that it has many formats as
-      # output.
-      - chroma-bin
       # System monitor. bottom can be used to look like htop but nicer.
       # - htop
       # Alternative to grep.
