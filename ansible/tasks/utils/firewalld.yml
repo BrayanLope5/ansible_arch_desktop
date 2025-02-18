@@ -16,7 +16,9 @@
     - 22000 # syncthing
     - 22067 # syncthing relay
     - 22070 # syncthing relay
-    # - 12315 # Grayjay sync
+    - 12315 # Grayjay sync
+    - 46898 # Needed for fcasting/chromecasting/casting
+    - 46899 # Needed for fcasting/chromecasting/casting
 
 - name: Opening needed udp ports.
   ansible.posix.firewalld:
@@ -30,7 +32,7 @@
     - 546 # dhcpv6-client
     - 22000 # syncthing
     - 21027 # syncthing
-    # - 12315 # Grayjay sync
+    - 12315 # Grayjay sync
 
 - name: Refuse incoming traffic for all listed services.
   ansible.posix.firewalld:
