@@ -28,6 +28,7 @@
       state: enabled
       immediate: true
   loop:
+    - 5353 # mDNS. Needed for device discoverability.
     - 53317 # localsend
     - 546 # dhcpv6-client
     - 22000 # syncthing
