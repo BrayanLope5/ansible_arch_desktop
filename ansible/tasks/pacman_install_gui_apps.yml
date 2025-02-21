@@ -101,6 +101,8 @@
       - lapce
       # Markdown note taking.
       - zettlr
+      # A daw like fl studio, lmms, etc.
+      - reaper
     state: present
 
 - name: From repos AND AUR, install GNOME GUI apps and their dependencies using pacman.
