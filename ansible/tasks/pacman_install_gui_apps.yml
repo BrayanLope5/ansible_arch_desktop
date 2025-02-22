@@ -99,6 +99,8 @@
       # motion support.
       - zed
       - lapce
+      # THE open source game engine.
+      - godot
       # Markdown note taking.
       - zettlr
       # A daw like fl studio, lmms, etc.
