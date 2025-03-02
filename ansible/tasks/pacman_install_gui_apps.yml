@@ -95,6 +95,10 @@
       # - sunshine
       # MD editor that looks good.
       # - marktext
+      # Run ai models easily from the command line.
+      - ollama
+      # Uses ollama as backedn to anwer and run tasks on the terminal.
+      - aichat
       # Zed and lapce are both performance driven editors with great vim
       # motion support.
       - zed
