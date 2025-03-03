@@ -170,9 +170,10 @@
       - mp3gain
       # Check for typos/grammar on text files. typos --diff --color always
       - typos
-      # Conda alternative but uses pypi repos. Maybe better for python.
+      # Conda alternative but uses pypi repos. Maybe better for python projects.
       - uv
       # Conda alternative but can use pypi repos AND conda repos.
+      # Globally can only install conda packages as tools.
       # It can also manage other runtimes, not just python.
       - pixi
       # Use it to manage rust toolchain versions.
