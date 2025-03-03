@@ -99,6 +99,8 @@
       # - ollama
       # # Install this for nvidia cards.
       # - ollama-cuda
+      # Manage and run text2image models.
+      # - invokeai
       # Uses ollama as backedn to anwer and run tasks on the terminal.
       - aichat
       # Zed and lapce are both performance driven editors with great vim
