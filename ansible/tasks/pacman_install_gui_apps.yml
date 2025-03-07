@@ -101,7 +101,12 @@
       # - ollama-cuda
       # Manage and run text2image models.
       # - invokeai
+      # A gui that does something similar to ollama except it has builtin support
+      # for huggingfae urls.
+      # - https://jan.ai/
       # Uses ollama as backedn to anwer and run tasks on the terminal.
+      # Has a minimal server that we can use a browser to navigate to it and have
+      # a ui for the ai.
       - aichat
       # Zed and lapce are both performance driven editors with great vim
       # motion support.
