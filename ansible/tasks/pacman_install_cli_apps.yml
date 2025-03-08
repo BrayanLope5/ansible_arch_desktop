@@ -42,9 +42,9 @@
       - fish
       # Nushell, data oriented shell. Non-posix. Start with nu command.
       - nushell
-      # NUSHELL can use json date and jc can convert cli outputs, files such
-      # as yaml to json.
-      - jc
+      # # NUSHELL can use json date and jc can convert cli outputs, files such
+      # # as yaml to json.
+      # - jc
       # Terminal powerline.
       - starship
       # System monitor. Use btm on terminal.
