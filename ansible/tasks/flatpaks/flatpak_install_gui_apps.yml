@@ -21,6 +21,8 @@
     name:
       # Manage EVERYTHING flatpak apps realated settings.
       - io.github.flattool.Warehouse
+      # Firefox skin? Not really, but based on firefox.
+      - app.zen_browser.zen
       # Manage app premissions.
       - com.github.tchx84.Flatseal
       - us.zoom.Zoom
