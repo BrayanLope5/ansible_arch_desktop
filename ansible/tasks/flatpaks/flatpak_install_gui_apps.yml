@@ -24,7 +24,7 @@
       # Manage app premissions.
       - com.github.tchx84.Flatseal
       - us.zoom.Zoom
-      - com.brave.Browser
+      # - com.brave.Browser
       # Best image viewer.
       - org.nomacs.ImageLounge
       - io.gitlab.librewolf-community
