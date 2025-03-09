@@ -86,8 +86,6 @@
       - krita
       # Content aware healing from AUR.
       # - gimp-plugin-resynthesizer-git
-      # Very complex audio editor.
-      #- ardour
       # Audio editor/recorder.
       - audacity
       # Downloads manager written in java.
@@ -111,7 +109,7 @@
       # Zed and lapce are both performance driven editors with great vim
       # motion support.
       - zed
-      - lapce
+      # - lapce
       # THE open source game engine.
       - godot
       # Markdown note taking.
