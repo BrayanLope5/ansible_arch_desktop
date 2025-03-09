@@ -58,7 +58,9 @@
     # Formatter for many langueges that supports extensions.
     # - dprint
   
-# - name: Install rye packages.
+
+# ERROR: I changed the name but nothing else, the logis is still wrong.
+# - name: Install uv packages.
 #   ansible.builtin.command: rye tools install "{{ item }}"
 #   register: result
 #   ignore_errors: true
