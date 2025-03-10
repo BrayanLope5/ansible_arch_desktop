@@ -84,7 +84,7 @@
       # flatpak version so that is prefered.
       # - gimp
       # Easier to use stable diffusion with it.
-      - krita
+      # - krita
       # Content aware healing from AUR.
       # - gimp-plugin-resynthesizer-git
       # Audio editor/recorder.

@@ -177,11 +177,12 @@
       # It can also manage other runtimes, not just python.
       - pixi
       # Use it to manage rust toolchain versions.
-      - rustup
+      # - rustup
       # rust-analyzer can also be installed with rust up but on arch linux,
       # this will not add it to ~/.cargo/bin. Instead it will be in the
-      # toolchin directory at ~/.rustup. This arch package adds it globally.
-      - rust-analyzer
+      # toolchin directory at ~/.rustup. This arch package adds it globally
+      # like any other binary.
+      # - rust-analyzer
       # Language sever for yaml documents. Needed for Helix.
       - yaml-language-server
       # Latex, tex file editing dependency packages.
