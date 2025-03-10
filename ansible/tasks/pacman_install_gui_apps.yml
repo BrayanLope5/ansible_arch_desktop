@@ -55,8 +55,6 @@
       - qbittorrent
       # Easily add/configure printers.
       - system-config-printer
-      # tvnamer the python module works better.
-      # - mediaelch
       # Install flatpaks on the system.
       - flatpak
       # Sync files between computers. Not necessarily a gui ap.
