@@ -138,7 +138,7 @@
       - dua-cli
       # Disk usage analyzer. Barely better in some ways than dua.
       - ncdu
-      # Disk usage tui.
+      # Disk usage analyzer tui. It shows disks and partitions.
       - duf
       # benchmark commands.
       - hyperfine
