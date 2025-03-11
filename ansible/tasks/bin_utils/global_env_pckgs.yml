@@ -67,4 +67,5 @@
 #   changed_when: result is search("Installed scripts")
 #   loop:
 #     - tvnamer
-#     - open-webui
+# --python python 3.11 open-webui
+# --python python3.12 aider-chat
