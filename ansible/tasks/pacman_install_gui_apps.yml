@@ -8,6 +8,8 @@
       - qt6-wayland
       - kvantum
       # - firefox
+      # AUR: a browser based on firefox but nicer to use with more features.
+      - zen-browser-bin
       # MS Office alternative and spell check tools.
       - libreoffice-fresh
       - hunspell
