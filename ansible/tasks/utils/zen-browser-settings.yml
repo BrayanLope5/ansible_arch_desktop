@@ -1,0 +1,14 @@
+- name: Create symlinks in child directories
+  find:
+    paths: "{{ parent_dir }}"
+    file_type: directory
+    depth: 1
+  register: child_dirs
+
+- name: Create symlinks
+  file:
+    src: "{{ parent_dir }}/{{ source_file }}"
+    dest: "{{ item.path }}/{{ source_file }}"
+    state: link
+  loop: "{{ child_dirs.files }}"
+  when: item.path != "{{ parent_dir }}"
