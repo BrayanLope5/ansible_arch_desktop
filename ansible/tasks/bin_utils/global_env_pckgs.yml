@@ -21,7 +21,7 @@
     # Check for grammar error in source code.
     - proselint
     # Format python conde written in python. Ruff is a better option now.
-    - black
+    # - black
     # Download youtube videos/audio.
     - yt-dlp
     # Python lsp from microsoft.
@@ -29,34 +29,35 @@
     # Normalize the audio on video so it closer in volume for the duration.
     - ffmpeg-normalize
     # Numerical computation for python.
-    - numpy
+    # - numpy
     # Needed for python and jupyter notebooks integration.
     - ipykernel
     # Easily make http/https requests on python.
-    - requests
+    # - requests
     # Plotting made easier on python.
-    - plotly
+    # - plotly
     # Pandas for tables on python.
-    - pandas
+    # - pandas
     # Required for pandas on python.
-    - nbformat
+    # - nbformat
     # Visualize different file formats in a table.
     - visidata
     # Shell that uses python.
-    - xonsh
+    # - xonsh
     # I am goint to see if I can just use deno only.
     # - nodejs
     - deno
     # Use typos cli tool as an lsp. There is a zed editor extension.
     - typos-lsp
     # Autocomplete for terminals.
-    - carapace
+    # - carapace
     # Pager with vim keybindings.
     - moar
     # So far I have only used it wih markdown but deno can also do it so thats
     # what I am switching to.
     # Formatter for many langueges that supports extensions.
     # - dprint
+
 - name: Install uv packages with optional Python version
   command: "uv tool install {{ '--python ' + item.python_version if item.python_version else '' }} {{item.name }}"
   register: result
