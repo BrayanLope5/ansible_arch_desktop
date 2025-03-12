@@ -61,7 +61,7 @@
 - name: Install uv packages with optional Python version
   command: "uv tool install --python {{ item.python_version }} {{item.name }}"
   register: result
-  changed_when: result is search("Successfully installed")
+  changed_when: result is search("Installed ")
   loop: "{{ uv_packages }}"
   vars:
     uv_packages:
