@@ -57,9 +57,8 @@
     # what I am switching to.
     # Formatter for many langueges that supports extensions.
     # - dprint
-  
 - name: Install uv packages with optional Python version
-  command: "uv tool install --python {{ item.python_version }} {{item.name }}"
+  command: "uv tool install {{ '--python ' + item.python_version if item.python_version else '' }} {{item.name }}"
   register: result
   changed_when: result is search("Installed ")
   loop: "{{ uv_packages }}"
