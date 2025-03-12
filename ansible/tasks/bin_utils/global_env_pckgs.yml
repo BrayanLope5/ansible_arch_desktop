@@ -58,14 +58,23 @@
     # Formatter for many langueges that supports extensions.
     # - dprint
   
+- name: Install uv packages with optional Python version
+  command: "uv tool install --python {{ item.python_version }} {{item.name }}"
+  register: result
+  changed_when: result is search("Successfully installed")
+  loop: "{{ uv_packages }}"
+  vars:
+    uv_packages:
+    # package without specific python version.
+     - name: tvnamer
+     # Empty string means no python versio specified.
+       python_version: ""
+     - name: open-webui
+       python_version: "python3.11"
+     - name: aider-chat
+       python_version: "python3.12"
 
-# ERROR: I changed the name but nothing else, the logis is still wrong.
-# - name: Install uv packages.
-#   ansible.builtin.command: rye tools install "{{ item }}"
-#   register: result
-#   ignore_errors: true
-#   changed_when: result is search("Installed scripts")
-#   loop:
-#     - tvnamer
-# --python python 3.11 open-webui
-# --python python3.12 aider-chat
+- name: Upgrade all uv packages.
+  command: "uv tool upgrade --all"
+  register: result
+  changed_when: result is not search("Nothing to upgrade")
