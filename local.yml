@@ -141,3 +141,8 @@
       import_tasks: ansible/tasks/systemd/ethernet_and_wifi.yml
       become: true
       become_user: root
+
+    - name: Symlink zen browser shortcuts file.
+      import_tasks: ansible/tasks/utils/zen-browser-settings.yml
+      become: true
+      become_user: "{{non_root_user}}"
