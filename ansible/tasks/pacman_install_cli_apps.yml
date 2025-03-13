@@ -5,22 +5,6 @@
       - yay
       # Paru is the same as yay but it can be faster for searches for example.
       - paru
-      # Package manger that can be used in most OSs.
-      # FOR NOW, do not use the scripting capabalities, just use it as a
-      # package manager.
-      # WARNING: For us to be able to use nix we need to add our user to the
-      # nix-users group.
-      # sudo usermod -a -G nix-users (whoami)
-      # TODO: There is probably an ansible module to add users to groups.
-      # After adding user to group, we need to also enable and start the nix-daemon.service
-      # sudo systemctl enable nix-daemon.service
-      # sudo systemctl start nix-daemon.service
-      # Then we have to add a nix channel. The unstable channel should be fine
-      # since I'll probably be only using cli applications and they are only
-      # added to the PATH when opening fish shell.
-      # nix-channel --add https://nixos.org/channels/nixpkgs-unstable
-      # nix-channel --update
-      - nix
       - git
       # Fuzzel and Joplin. Patched with nerd fonts.
       - ttf-firacode-nerd
