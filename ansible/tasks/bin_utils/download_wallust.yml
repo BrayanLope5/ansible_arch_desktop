@@ -1,9 +1,6 @@
 - name: Get api response to find url to latest release of wallust.
   ansible.builtin.uri:
-    # Not using this url because this gives me the latest stable release.
     url: https://codeberg.org/explosion-mental/wallust/releases/latest
-    # For now I have a link no to the latest stable release but a specific one.
-    # url: https://codeberg.org/explosion-mental/wallust/releases/tag/3.0.0-beta
     return_content: true
   register: json_response
 
