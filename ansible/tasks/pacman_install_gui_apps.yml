@@ -101,7 +101,8 @@
       # Uses ollama as backedn to anwer and run tasks on the terminal.
       # Has a minimal server that we can use a browser to navigate to it and have
       # a ui for the ai.
-      - aichat
+      # WARNING: This doesnt seem to be as useful as aider.chat
+      # - aichat
       # Zed and lapce are both performance driven editors with great vim
       # motion support.
       - zed
