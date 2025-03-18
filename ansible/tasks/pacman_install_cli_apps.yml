@@ -26,9 +26,6 @@
       - fish
       # Nushell, data oriented shell. Non-posix. Start with nu command.
       - nushell
-      # # NUSHELL can use json date and jc can convert cli outputs, files such
-      # # as yaml to json.
-      # - jc
       # Terminal powerline.
       - starship
       # System monitor. Use btm on terminal.
@@ -39,8 +36,6 @@
       - tealdeer
       # Better shell history search.
       - atuin
-      # Colors output with rainbow colors.
-      - lolcat
       # neofetch alternative written in c.
       - fastfetch
       # neofetch but instead of system details, it gives git details.
@@ -57,13 +52,6 @@
       - perl-image-exiftool
       # Similar to exiftool but newer.
       - exiv2
-      # Rename and tag music files.
-      # - beets
-      # Requirements for beets to fingerprint files.
-      # - python-pyacoustid # Requirements for beets to fingerprint files.
-      # - chromaprint
-      # Requirements for beets to make API calls to MusicBrainz.
-      # - python-requests
       # Alternative to cat. Shows contents of text files.
       - bat
       # System monitor. bottom can be used to look like htop but nicer.
@@ -91,8 +79,6 @@
       - git-delta
       # Another diff alternative but that understands syntax. Run with difft
       - difftastic
-      # AUR: tui to manage docker containers.
-      # - lazydocker
       # Friendly TUI alternative for git written in Rust. Not as nice as lazygit.
       - gitui
       # Alternative to cd but much better. It remembers folders visited.
@@ -184,6 +170,8 @@
       # Run containers.
       # - docker
       # - docker-compose
+      # AUR: tui to manage docker containers.
+      # - lazydocker
       # Tool to upload files to immich server.
       - immich-go
       # Check spelling/grammar/typos in the command line interactively.
@@ -192,7 +180,12 @@
       - aspell-en
       # NOT WORTH THE CPU/GPU power needed to run it.
       # Download, run, manage llm models from the commandline.
-      # - ollama
+      - ollama
+      - android-sdk-cmdline-tools-latest
+      - android-sdk-build-tools
+      - android-sdk-platform-tools
+      - android-platform
+      # Grammar checker
       - harper
     state: present
 
