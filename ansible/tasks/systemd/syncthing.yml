@@ -1,0 +1,7 @@
+- name: Start and enable Syncthing service for the user.
+  ansible.builtin.systemd:
+    name: "syncthing@{{ non_root_user }}.service"
+    state: started
+    enabled: true
+    masked: false
+    scope: "user"

@@ -137,6 +137,11 @@
       become: true
       become_user: "{{non_root_user}}"
 
+    - name: Start/enable syncthing for user.
+      import_tasks: ansible/tasks/systemd/syncthing.yml
+      become: true
+      become_user: "{{non_root_user}}"
+
     - name: Ethernet/Wifi. Stop/disable wpa_supplicant, enable/start NetworkManager, create minimial NetworkManager config to use iwd for wifi.
       import_tasks: ansible/tasks/systemd/ethernet_and_wifi.yml
       become: true
