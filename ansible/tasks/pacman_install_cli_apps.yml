@@ -181,10 +181,13 @@
       # NOT WORTH THE CPU/GPU power needed to run it.
       # Download, run, manage llm models from the commandline.
       - ollama
-      - android-sdk-cmdline-tools-latest
-      - android-sdk-build-tools
-      - android-sdk-platform-tools
-      - android-platform
+      # ERROR: Not sure how to deal with this yet. I think I also need Java?
+      # I want to export from godot to android but I am not sure what
+      # godot needs to do that.
+      # - android-sdk-cmdline-tools-latest
+      # - android-sdk-build-tools
+      # - android-sdk-platform-tools
+      # - android-platform
       # Grammar checker
       - harper
     state: present
