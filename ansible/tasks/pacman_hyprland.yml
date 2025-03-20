@@ -27,6 +27,10 @@
       - grim
       - slurp
       - hyprpicker
+      # Provides scripting tools to subscriobe to file change/save events and
+      # returns info about it, like the path of the modified file.
+      # INFO: Similar in some ways to watchexec.
+      - inotify-tools
       # Needed to send notifications. Provides notify-send command.
       - libnotify
       # GTK3 settings editor that works on wlroots environment.
