@@ -73,7 +73,7 @@
        python_version: "python3.11"
        # What is this about: uv tool install --python=3.13 --with=glibc-2.40-1 aider-chat
      - name: aider-chat
-       python_version: "python3.12"
+       python_version: ""
 
 - name: Upgrade all uv packages.
   command: "uv tool upgrade --all"
